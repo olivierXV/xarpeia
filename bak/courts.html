@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><!--fav--><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2214%22%20fill=%22%230b1b3a%22/%3E%3Cg%20transform=%22translate(32%2032)%20scale(0.19167)%20translate(-120.00%20-95.00)%22%3E%3Cg%20fill=%22%23e0b95a%22%3E%0A%20%20%3Cpath%20fill-rule=%22evenodd%22%20d=%22M30%2074%20L120%2018%20L210%2074%20Z%20M52%2068%20L120%2026%20L188%2068%20Z%22/%3E%0A%20%20%3Ccircle%20cx=%22120%22%20cy=%2252%22%20r=%227%22/%3E%0A%20%20%3Crect%20x=%2226%22%20y=%2278%22%20width=%22188%22%20height=%228%22/%3E%0A%20%20%3Cpath%20fill-rule=%22evenodd%22%20d=%22M36%2090%20h14%20v58%20h-14%20Z%20M40%2094%20h6%20v46%20h-6%20Z%22/%3E%0A%20%20%3Cpath%20fill-rule=%22evenodd%22%20d=%22M66.8%2090%20h14%20v58%20h-14%20Z%20M70.8%2094%20h6%20v46%20h-6%20Z%22/%3E%0A%20%20%3Cpath%20fill-rule=%22evenodd%22%20d=%22M97.6%2090%20h14%20v58%20h-14%20Z%20M101.6%2094%20h6%20v46%20h-6%20Z%22/%3E%0A%20%20%3Cpath%20fill-rule=%22evenodd%22%20d=%22M128.4%2090%20h14%20v58%20h-14%20Z%20M132.4%2094%20h6%20v46%20h-6%20Z%22/%3E%0A%20%20%3Cpath%20fill-rule=%22evenodd%22%20d=%22M159.2%2090%20h14%20v58%20h-14%20Z%20M163.2%2094%20h6%20v46%20h-6%20Z%22/%3E%0A%20%20%3Cpath%20fill-rule=%22evenodd%22%20d=%22M190%2090%20h14%20v58%20h-14%20Z%20M194%2094%20h6%20v46%20h-6%20Z%22/%3E%0A%20%20%3Crect%20x=%2232%22%20y=%22148%22%20width=%22176%22%20height=%226%22/%3E%0A%20%20%3Crect%20x=%2226%22%20y=%22156%22%20width=%22188%22%20height=%226%22/%3E%0A%20%20%3Crect%20x=%2220%22%20y=%22164%22%20width=%22200%22%20height=%226%22/%3E%0A%20%20%3Crect%20x=%2214%22%20y=%22172%22%20width=%22212%22%20height=%226%22/%3E%0A%3C/g%3E%3C/g%3E%3C/svg%3E"><link rel="apple-touch-icon" href="data:image/png;base64,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"><!--/fav-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Courts of the Federation: the Supreme Court, the Constitutional Court, appellate and lower federal courts of the Federal Republic of Latrevia."><meta name="theme-color" content="#0B1B3A">
+<title>The Federal Courts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: the Federal portal's system (navy masthead, flag band, gold hairlines) with a ceremonial opening:
+   the Executive Palace mark beside the title, then a profile, a filterable Cabinet, a roll of predecessors.
+   Dark is the default; light is opt-in through the toggle. */
+:root {
+  --bg: #0B1B3A;
+  --bg-2: #0E2145;
+  --card: #12294F;
+  --card-hi: #183463;
+  --line: #2A4274;
+  --fg: #F3EFE6;
+  --fg-2: #B7C3D8;
+  --gold: #B8964E;
+  --gold-text: #CDAE69;
+  --link: #8FB0CC;
+  --sky: #19B5F5;
+  --focus: #E5C77E;
+  --band-a: #07122A;
+  --band-b: #0B1B3A;
+  --band-fg: #F3EFE6;
+  --band-fg-2: #A9B7CE;
+  --on-gold: #0B1B3A;
+  --mark: #CDAE69;
+  --p-cdp: #6FB7E6;
+  --p-spp: #D8B65F;
+  --p-llp: #E07C86;
+  --p-ea: #7FC28F;
+  --p-ind: #9AA8C4;
+  --p-uc: #AE9FD6;
+  --p-reg: #6F86B4;
+  --p-sec: #4B6AA3;
+  --f-display: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --f-body: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #F4F6FA; --bg-2: #E8EDF5; --card: #FFFFFF; --card-hi: #EEF2F9; --line: #C9D3E3;
+    --fg: #0B1B3A; --fg-2: #435578; --gold-text: #7A5F22; --link: #1F4E86; --sky: #0A8FD0; --focus: #1F4E86;
+    --mark: #0B1B3A;
+    --p-cdp: #1F78B4; --p-spp: #9A7418; --p-llp: #B03A48; --p-ea: #2E8B57; --p-ind: #66738F; --p-uc: #6E5BA8; --p-reg: #5A6E9E; --p-sec: #3F5C93;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #F4F6FA; --bg-2: #E8EDF5; --card: #FFFFFF; --card-hi: #EEF2F9; --line: #C9D3E3;
+  --fg: #0B1B3A; --fg-2: #435578; --gold-text: #7A5F22; --link: #1F4E86; --sky: #0A8FD0; --focus: #1F4E86;
+  --mark: #0B1B3A;
+  --p-cdp: #1F78B4; --p-spp: #9A7418; --p-llp: #B03A48; --p-ea: #2E8B57; --p-ind: #66738F; --p-uc: #6E5BA8; --p-reg: #5A6E9E; --p-sec: #3F5C93;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 1rem/1.6 var(--f-body); -webkit-text-size-adjust: 100%; }
+a { color: var(--link); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure, blockquote { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; }
+
+.wrap { max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+.mono { font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--gold); color: var(--on-gold); padding: 8px 14px; z-index: 20; font-weight: 600; }
+.skip:focus { top: 8px; }
+
+/* masthead */
+.flagband { display: grid; grid-template-rows: repeat(3, 3px); }
+.flagband i { display: block; background: #19B5F5; }
+.flagband i:nth-child(2) { background: #FFFFFF; }
+.topbar { background: var(--band-a); color: var(--band-fg-2); font-size: 0.8125rem; }
+.topbar .wrap { display: flex; flex-wrap: wrap; gap: 4px 20px; justify-content: space-between; align-items: center; padding-block: 7px; }
+.topbar .who { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.topbar .who img { width: 24px; height: auto; border-radius: 1px; flex: none; }
+.topbar .right { display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center; }
+.topbar a { color: var(--band-fg-2); }
+.topbar time { font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.04em; color: var(--band-fg); white-space: nowrap; }
+.masthead { background: var(--band-b); color: var(--band-fg); border-bottom: 2px solid var(--gold); }
+.masthead .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; margin-right: auto; min-width: 0; }
+.brand svg { width: 76px; height: auto; flex: none; color: #CDAE69; }
+.brand b { display: block; font: 500 1.3rem/1.15 var(--f-display); letter-spacing: 0.005em; }
+.brand span span { display: block; font-size: 0.78rem; color: var(--band-fg-2); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+.nav { display: flex; flex-wrap: wrap; gap: 4px 4px; }
+.nav a { color: var(--band-fg); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 8px 9px; border-bottom: 2px solid transparent; }
+.nav a:hover { border-bottom-color: var(--gold); }
+.theme-btn { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; background: transparent; border: 1px solid #5A6E96; color: var(--band-fg); padding: 7px 12px; font-size: 0.82rem; font-weight: 500; border-radius: 3px; }
+.theme-btn:hover { border-color: var(--gold); }
+.theme-btn svg { width: 16px; height: 16px; flex: none; }
+
+/* hero */
+.hero { background: var(--bg); border-bottom: 1px solid var(--line); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 32px 56px; align-items: center; padding-block: 56px 44px; }
+.eyebrow { color: var(--gold-text); margin-bottom: 14px; }
+.hero h1 { font: 500 clamp(2.4rem, 5.4vw, 3.9rem)/1.04 var(--f-display); letter-spacing: -0.01em; text-wrap: balance; }
+.hero .lead { margin-top: 18px; max-width: 54ch; color: var(--fg-2); font-size: 1.1rem; }
+.quick { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { display: inline-block; text-decoration: none; background: var(--gold); color: var(--on-gold); border: 1px solid var(--gold); padding: 10px 18px; font-weight: 600; border-radius: 3px; font-size: 0.92rem; }
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; color: var(--fg); border-color: var(--line); font-weight: 500; }
+.btn.ghost:hover { border-color: var(--gold); filter: none; }
+.hero-art { display: grid; gap: 10px; justify-items: center; }
+.hero-art svg { width: min(100%, 420px); height: auto; color: var(--mark); }
+.hero-art .mono { color: var(--fg-2); text-align: center; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); border-top: 2px solid var(--gold); background: var(--bg); }
+.facts-in { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 0; }
+.fact { padding: 16px 18px 18px 0; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.fact + .fact { padding-left: 18px; border-left: 1px solid var(--line); }
+.fact dt { color: var(--gold-text); }
+.fact dd { font: 500 1.1rem/1.3 var(--f-display); }
+.facts-band { background: var(--bg); border-bottom: 1px solid var(--line); }
+.facts-band .wrap { border-top: 1px solid var(--line); }
+
+/* sections */
+section { padding-block: 64px; border-bottom: 1px solid var(--line); }
+section.alt { background: var(--bg-2); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 32px; max-width: 70ch; }
+.sec-head .mono { color: var(--gold-text); }
+.sec-head h2 { font: 500 clamp(1.7rem, 3.4vw, 2.4rem)/1.15 var(--f-display); text-wrap: balance; }
+.sec-head p { color: var(--fg-2); }
+h3.sub { font: 500 1.4rem/1.2 var(--f-display); margin-bottom: 16px; }
+
+/* president */
+.profile { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 36px 56px; align-items: start; }
+.prose { display: grid; gap: 14px; max-width: 64ch; color: var(--fg-2); }
+.prose p:first-child { color: var(--fg); font-size: 1.08rem; }
+.glance { background: var(--card); border: 1px solid var(--line); border-top: 2px solid var(--gold); border-radius: 3px; padding: 18px 20px; }
+.glance h3 { font: 500 1.25rem/1.2 var(--f-display); margin-bottom: 6px; }
+.kv { display: grid; }
+.kv div { display: grid; grid-template-columns: minmax(0, 8.5em) minmax(0, 1fr); gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
+.kv div:first-child { border-top: 0; }
+.kv dt { color: var(--gold-text); padding-top: 3px; }
+.kv dd { color: var(--fg); }
+.career { margin-top: 52px; }
+.tl { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 0 48px; }
+.tl li { display: grid; grid-template-columns: 5.2em minmax(0, 1fr); gap: 14px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 0.93rem; color: var(--fg-2); }
+.tl li b { color: var(--gold-text); font: 500 0.78rem/1.7 var(--f-mono); letter-spacing: 0.04em; }
+.tl li strong { color: var(--fg); font-weight: 600; }
+.tl li.now b, .tl li.now strong { color: var(--fg); }
+.tl li.now { background: linear-gradient(90deg, rgba(184,150,78,0.16), transparent 70%); }
+
+/* cabinet */
+.pm { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px 24px; align-items: start; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--gold); padding: 22px 24px; border-radius: 3px; margin-bottom: 28px; }
+.mono-box { width: 54px; height: 54px; flex: none; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 2px; font: 500 1.25rem/1 var(--f-display); color: var(--gold-text); background: var(--bg); letter-spacing: 0.02em; }
+.pm h3 { font: 500 1.5rem/1.2 var(--f-display); margin: 4px 0 8px; }
+.pm p { color: var(--fg-2); max-width: 72ch; }
+.pm .mono { color: var(--gold-text); }
+.pm p + p { margin-top: 8px; }
+.cab-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; align-items: center; }
+.cab-count { margin-left: auto; color: var(--fg-2); }
+.chip { cursor: pointer; background: transparent; border: 1px solid var(--line); color: var(--fg); padding: 5px 12px; border-radius: 999px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 7px; }
+.chip:hover { border-color: var(--gold); }
+.chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--on-gold); font-weight: 600; }
+.chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--p-ind)); flex: none; }
+.cab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 16px; align-items: start; }
+.min { background: var(--card); border: 1px solid var(--line); border-radius: 3px; padding: 16px 18px 18px; display: grid; gap: 10px; min-width: 0; border-top: 3px solid var(--c, var(--p-ind)); }
+.min-top { display: flex; gap: 12px; align-items: center; min-width: 0; }
+.min-top .mono-box { width: 44px; height: 44px; font-size: 1.05rem; }
+.min h3 { font: 600 1.05rem/1.25 var(--f-body); }
+.min .role { color: var(--gold-text); margin-top: 2px; }
+.pty { display: inline-flex; align-items: center; gap: 7px; font-size: 0.8rem; color: var(--fg-2); }
+.pty i { width: 9px; height: 9px; border-radius: 50%; background: var(--c, var(--p-ind)); flex: none; }
+.min p { font-size: 0.9rem; color: var(--fg-2); }
+.min p b { display: block; font: 500 0.7rem/1.6 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-text); }
+.tagline { display: inline-block; font-size: 0.78rem; border: 1px solid var(--line); border-radius: 2px; padding: 2px 8px; color: var(--fg); }
+[data-p="cdp"] { --c: var(--p-cdp); }
+[data-p="spp"] { --c: var(--p-spp); }
+[data-p="llp"] { --c: var(--p-llp); }
+[data-p="ea"] { --c: var(--p-ea); }
+[data-p="ind"] { --c: var(--p-ind); }
+[data-p="uc"] { --c: var(--p-uc); }
+[data-p="reg"] { --c: var(--p-reg); }
+[data-p="sec"] { --c: var(--p-sec); }
+.house { margin-top: 56px; }
+.house > p { color: var(--fg-2); max-width: 72ch; margin-bottom: 20px; }
+.bar-wrap { position: relative; padding-top: 30px; }
+.bracket { position: absolute; top: 0; left: 0; width: 55%; border-top: 2px solid var(--gold); height: 22px; border-left: 2px solid var(--gold); border-right: 2px solid var(--gold); }
+.bracket span { position: absolute; top: -1px; left: 0; right: 0; padding: 4px 8px 0; color: var(--gold-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar { display: flex; height: 30px; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; background: var(--c); border-right: 2px solid var(--bg-2); }
+.bar i:last-child { border-right: 0; }
+.legend { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 0 32px; }
+.legend li { display: flex; align-items: baseline; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 0.9rem; color: var(--fg-2); }
+.legend li i { width: 10px; height: 10px; border-radius: 2px; background: var(--c); flex: none; align-self: center; }
+.legend li span:nth-child(2) { color: var(--fg); flex: 1; min-width: 0; }
+.legend li .mono { color: var(--gold-text); white-space: nowrap; }
+.note { margin-top: 12px; font-size: 0.88rem; color: var(--fg-2); }
+
+/* predecessors */
+.era { display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr); gap: 8px 40px; padding-block: 24px; border-top: 2px solid var(--gold); }
+.era + .era { margin-top: 8px; }
+.era h3 { font: 500 1.3rem/1.2 var(--f-display); }
+.era .mono { color: var(--gold-text); display: block; margin-bottom: 6px; }
+.era .era-note { font-size: 0.86rem; color: var(--fg-2); margin-top: 8px; }
+.roll li { display: grid; grid-template-columns: 8.2em minmax(0, 1fr); gap: 4px 18px; padding: 11px 0; border-top: 1px solid var(--line); }
+.roll li:first-child { border-top: 0; padding-top: 0; }
+.roll .yrs { font: 500 0.78rem/1.7 var(--f-mono); letter-spacing: 0.03em; color: var(--gold-text); }
+.roll h4 { font: 600 1rem/1.35 var(--f-body); }
+.roll p { font-size: 0.9rem; color: var(--fg-2); margin-top: 2px; max-width: 70ch; }
+.roll li.current { background: linear-gradient(90deg, rgba(184,150,78,0.16), transparent 70%); padding-inline: 12px; margin-inline: -12px; border-radius: 2px; }
+.roll li.current .yrs, .roll li.current h4 { color: var(--fg); }
+.roll li.open h4 { color: var(--fg-2); font-style: italic; font-weight: 500; }
+
+/* presidency */
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 32px 48px; }
+.two-col h3 { font: 500 1.35rem/1.2 var(--f-display); margin-bottom: 12px; }
+.plist li { padding: 9px 0; border-top: 1px solid var(--line); font-size: 0.92rem; color: var(--fg-2); display: flex; gap: 12px; justify-content: space-between; }
+.plist li span:first-child { color: var(--fg); }
+.plist .mono { color: var(--gold-text); white-space: nowrap; }
+.oathbox { margin-top: 48px; padding: 24px 26px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 3px; }
+.oathbox .mono { color: var(--gold-text); }
+.oathbox blockquote { margin-top: 10px; font: italic 400 clamp(1.05rem, 2vw, 1.28rem)/1.55 var(--f-display); max-width: 70ch; }
+.oathbox blockquote p + p { margin-top: 10px; }
+.status { margin-top: 32px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 14px; align-items: baseline; padding: 14px 18px; border: 1px solid var(--line); border-radius: 3px; background: var(--card); }
+.status .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--p-ea); align-self: center; }
+.status b { font-weight: 600; }
+.status p { grid-column: 2; font-size: 0.9rem; color: var(--fg-2); }
+
+/* commonwealth */
+.cw { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px 56px; align-items: start; }
+.cw h2 { font: 500 clamp(1.7rem, 3.4vw, 2.4rem)/1.15 var(--f-display); margin: 10px 0 14px; text-wrap: balance; }
+.cw p { color: var(--fg-2); max-width: 58ch; }
+.cw p + p { margin-top: 12px; }
+.cw .mono { color: var(--gold-text); }
+.cw-links { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.btn.off { opacity: 0.6; cursor: not-allowed; }
+.cw-flag { margin-top: 22px; width: 180px; border: 1px solid var(--line); }
+
+/* news */
+.news li { display: grid; grid-template-columns: 7em minmax(0, 1fr); gap: 4px 24px; padding: 18px 0; border-top: 1px solid var(--line); }
+.news li:last-child { border-bottom: 1px solid var(--line); }
+.news .when { font: 500 0.78rem/1.7 var(--f-mono); letter-spacing: 0.04em; color: var(--gold-text); }
+.news h3 { font: 600 1.05rem/1.35 var(--f-body); }
+.news p { font-size: 0.92rem; color: var(--fg-2); margin-top: 4px; max-width: 70ch; }
+.news .tag { display: inline-block; margin-top: 8px; color: var(--fg-2); border: 1px solid var(--line); border-radius: 999px; padding: 1px 10px; font-size: 0.7rem; }
+
+/* contact */
+.svc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 16px; align-items: start; }
+.svc { background: var(--card); border: 1px solid var(--line); border-top: 2px solid var(--gold); border-radius: 3px; padding: 18px; display: grid; gap: 6px; min-width: 0; }
+.svc h3 { font: 600 1.05rem/1.3 var(--f-body); }
+.svc p { color: var(--fg-2); font-size: 0.92rem; }
+.addr { margin-top: 28px; padding: 18px 20px; border: 1px dashed var(--line); border-radius: 3px; color: var(--fg-2); font-size: 0.95rem; }
+.addr b { color: var(--fg); font-weight: 600; }
+
+/* footer */
+footer { background: var(--band-a); color: var(--band-fg-2); border-top: 2px solid var(--gold); }
+footer .wrap { padding-block: 36px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px 28px; align-items: start; }
+footer .marks { display: flex; gap: 14px; align-items: center; }
+footer .marks img { width: 60px; height: 60px; }
+footer .marks svg { width: 92px; height: auto; color: #CDAE69; }
+footer b { color: var(--band-fg); font: 500 1.2rem/1.2 var(--f-display); display: block; margin-bottom: 8px; }
+footer p { font-size: 0.85rem; max-width: 80ch; }
+footer p + p { margin-top: 8px; }
+footer a { color: var(--band-fg-2); }
+footer .motto { margin-top: 14px; color: #CDAE69; font: italic 400 1rem/1.4 var(--f-display); }
+
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); padding-block: 36px; }
+  .hero-art { order: -1; }
+  .hero-art svg { width: min(100%, 260px); }
+  section { padding-block: 48px; }
+  .profile, .cw { grid-template-columns: minmax(0, 1fr); }
+  .pm { grid-template-columns: minmax(0, 1fr); }
+  .era { grid-template-columns: minmax(0, 1fr); }
+  .roll li { grid-template-columns: minmax(0, 1fr); }
+  .news li { grid-template-columns: minmax(0, 1fr); }
+  .fact, .fact + .fact { padding: 12px 0; border-left: 0; border-top: 1px solid var(--line); }
+  .facts-in { display: block; }
+  footer .wrap { grid-template-columns: minmax(0, 1fr); }
+  .cab-count { margin-left: 0; flex-basis: 100%; }
+  .brand svg { width: 60px; }
+  .tl li { grid-template-columns: 4.6em minmax(0, 1fr); }
+  .bracket span { font-size: 0.66rem; }
+}
+
+/* ---- Assembly additions ---- */
+.hero-art svg.dome { width: min(100%, 440px); }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 0 28px; counter-reset: st; }
+.steps li { counter-increment: st; padding: 18px 0 20px; border-top: 2px solid var(--gold); display: grid; gap: 8px; align-content: start; }
+.steps li::before { content: counter(st); width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold-text); font: 500 1rem/1 var(--f-display); }
+.steps h3 { font: 600 1.02rem/1.3 var(--f-body); }
+.steps p { font-size: 0.9rem; color: var(--fg-2); }
+.cmp { border-top: 2px solid var(--gold); }
+.cmp-row { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr) minmax(0, 1fr); gap: 6px 28px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 0.93rem; color: var(--fg-2); }
+.cmp-row b { color: var(--gold-text); font: 500 0.75rem/1.8 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; }
+.cmp-row.head { border-bottom: 1px solid var(--gold); padding-block: 10px; }
+.cmp-row.head div { color: var(--fg); font: 500 1.15rem/1.2 var(--f-display); }
+.cmp-row div { min-width: 0; color: var(--fg); }
+.chamber-tag { display: inline-flex; align-items: center; gap: 8px; }
+.chamber-tag i { width: 10px; height: 10px; border-radius: 50%; background: var(--sky); }
+#senate .chamber-tag i { background: var(--gold); }
+.tally { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 12px; margin-bottom: 22px; }
+.tally div { background: var(--card); border: 1px solid var(--line); border-top: 2px solid var(--gold); border-radius: 3px; padding: 12px 14px; }
+.tally b { display: block; font: 500 1.8rem/1.1 var(--f-display); }
+.tally span { font-size: 0.82rem; color: var(--fg-2); }
+.hemi-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 3px; padding: 18px 14px 8px; }
+.hemi-wrap svg { width: 100%; height: auto; max-width: 780px; margin-inline: auto; }
+.hemi-wrap .mid { text-align: center; margin-top: -8px; padding-bottom: 10px; color: var(--fg-2); font-size: 0.85rem; }
+.hemi-wrap .mid b { display: block; color: var(--fg); font: 500 1.7rem/1.1 var(--f-display); }
+.seat { fill: var(--c); transition: opacity .15s; }
+.dim .seat:not(.on), .dim .st-seat:not(.on) { opacity: 0.18; }
+.keys { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+.keys .chip { font-size: 0.82rem; padding: 5px 11px; }
+.keys .chip span.n { font-family: var(--f-mono); font-size: 0.74rem; color: var(--fg-2); }
+.keys .chip[aria-pressed="true"] span.n { color: var(--on-gold); }
+.keys .chip i { border-radius: 2px; }
+.sen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 10px; }
+.stile { background: var(--card); border: 1px solid var(--line); border-radius: 3px; padding: 10px 12px 12px; text-align: left; cursor: pointer; display: grid; gap: 8px; min-width: 0; }
+.stile:hover { border-color: var(--gold); }
+.stile[aria-pressed="true"] { border-color: var(--gold); background: var(--card-hi); }
+.stile .nm { font-size: 0.86rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+.stile .east { font: 500 0.62rem/1 var(--f-mono); letter-spacing: 0.06em; color: var(--gold-text); text-transform: uppercase; }
+.stile .pair { display: flex; gap: 8px; }
+.st-seat { width: 22px; height: 22px; border-radius: 50%; background: var(--c); transition: opacity .15s; border: 2px solid var(--card); box-shadow: 0 0 0 1px var(--line); }
+.s-detail { margin-top: 14px; padding: 14px 18px; border: 1px solid var(--line); border-left: 4px solid var(--gold); background: var(--card); border-radius: 3px; font-size: 0.93rem; color: var(--fg-2); min-height: 3.4em; }
+.s-detail b { color: var(--fg); }
+.ph { color: var(--fg-2); font-style: italic; }
+.officers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; }
+.off { background: var(--card); border: 1px solid var(--line); border-top: 2px solid var(--gold); border-radius: 3px; padding: 16px 18px; display: grid; gap: 4px; }
+.off .mono { color: var(--gold-text); }
+.off h3 { font: 500 1.1rem/1.3 var(--f-display); }
+.off p { font-size: 0.88rem; color: var(--fg-2); }
+.two-col .plist li { align-items: baseline; }
+@media (max-width: 760px) {
+  .cmp-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .cmp-row.head { display: none; }
+  .cmp-row div::before { content: attr(data-h) ': '; font: 500 0.7rem/1 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-text); }
+  .hero-art svg.dome { width: min(100%, 280px); }
+  .hemi-wrap { padding-inline: 6px; }
+}
+:root { --p-sec: #E4E7EE; }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --p-sec: #2B3A5C; } }
+:root[data-theme="light"] { --p-sec: #2B3A5C; }
+@media (max-width: 720px) {
+  .masthead .wrap { gap: 8px 12px; padding-block: 10px; }
+  .nav { order: 3; flex-basis: 100%; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-inline: -20px; padding-inline: 12px; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { white-space: nowrap; padding: 10px 10px; }
+  .theme-btn { padding: 8px 10px; }
+}
+.sub{font:500 1.35rem/1.2 var(--f-display);margin-bottom:12px}
+.profile2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;align-items:start}
+.glance h3{font:500 1.25rem/1.2 var(--f-display);margin-bottom:10px}
+.docket{display:grid}
+.docket li{display:grid;grid-template-columns:3.4em minmax(0,1fr) auto;gap:4px 14px;padding:14px 0;border-top:1px solid var(--line);align-items:start}
+.docket li:last-child{border-bottom:1px solid var(--line)}
+.docket li.none{display:block;color:var(--fg-2);font-size:.92rem}
+.docket .tm{color:var(--gold-text);font-size:.8rem;padding-top:2px}
+.docket h4{font:600 1rem/1.35 var(--f-body)}
+.docket p{font-size:.9rem;color:var(--fg-2);margin-top:3px}
+.docket .meta{display:block;margin-top:6px;color:var(--fg-2);font-size:.7rem}
+.docket .st{font:500 .72rem/1 var(--f-mono);padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--fg-2);white-space:nowrap}
+.docket .st.h{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
+.docket .st.d{border-color:var(--p-ea);color:var(--p-ea)}
+.tblw{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:.92rem}
+.tbl th{text-align:left;font:500 .75rem/1.6 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--gold-text);padding:8px 14px 8px 0;border-bottom:1px solid var(--gold)}
+.tbl td{padding:10px 14px 10px 0;border-top:1px solid var(--line);color:var(--fg)}
+.tbl tr.now td{background:var(--card);font-weight:600}
+.state-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,170px),1fr));gap:8px;margin-top:14px}
+.stt{display:grid;gap:2px;padding:10px 12px;border:1px solid var(--line);border-radius:3px;background:var(--card);transition:opacity .15s}
+.stt b{font:600 .92rem/1.25 var(--f-body)}
+.stt .mono{color:var(--gold-text);font-size:.68rem}
+.chip .n{opacity:.7;font-size:.78rem}
+.dome{width:min(100%,440px);height:auto}
+.brand svg{width:46px;height:auto;color:var(--mark)}
+@media (max-width:720px){
+ .cmp-row{grid-template-columns:minmax(0,1fr)}
+ .cmp-row.head{display:none}
+ .cmp-row div[data-h]::before{content:attr(data-h);display:block;font:500 .68rem/1.6 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--gold-text)}
+ .docket li{grid-template-columns:3em minmax(0,1fr)}
+ .docket .st{grid-column:2;justify-self:start}
+ .news li{grid-template-columns:minmax(0,1fr)}
+}
+.brand svg{color:#CDAE69}
+.cl{color:inherit;text-decoration:none;border-bottom:1px solid var(--gold)}
+.cl:hover{color:var(--gold-text)}
+.cv{position:fixed;inset:0;background:rgba(5,10,25,.72);z-index:50;display:grid;place-items:start center;overflow-y:auto;padding:28px 12px}
+.cv[hidden]{display:none}
+.cv-in{background:var(--bg);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:3px;max-width:760px;width:100%;padding:22px 24px 26px}
+.cv-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:var(--gold-text)}
+.cv h2{font:500 1.7rem/1.2 var(--f-display);margin-bottom:6px}
+.cv-sub{color:var(--fg-2);margin-bottom:16px;font-size:.78rem}
+body.ov{overflow:hidden}
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="court" viewBox="0 0 240 190"><g fill="currentColor">
+  <path fill-rule="evenodd" d="M30 74 L120 18 L210 74 Z M52 68 L120 26 L188 68 Z"/>
+  <circle cx="120" cy="52" r="7"/>
+  <rect x="26" y="78" width="188" height="8"/>
+  <path fill-rule="evenodd" d="M36 90 h14 v58 h-14 Z M40 94 h6 v46 h-6 Z"/>
+  <path fill-rule="evenodd" d="M66.8 90 h14 v58 h-14 Z M70.8 94 h6 v46 h-6 Z"/>
+  <path fill-rule="evenodd" d="M97.6 90 h14 v58 h-14 Z M101.6 94 h6 v46 h-6 Z"/>
+  <path fill-rule="evenodd" d="M128.4 90 h14 v58 h-14 Z M132.4 94 h6 v46 h-6 Z"/>
+  <path fill-rule="evenodd" d="M159.2 90 h14 v58 h-14 Z M163.2 94 h6 v46 h-6 Z"/>
+  <path fill-rule="evenodd" d="M190 90 h14 v58 h-14 Z M194 94 h6 v46 h-6 Z"/>
+  <rect x="32" y="148" width="176" height="6"/>
+  <rect x="26" y="156" width="188" height="6"/>
+  <rect x="20" y="164" width="200" height="6"/>
+  <rect x="14" y="172" width="212" height="6"/>
+</g></symbol></svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="flagband" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="topbar">
+  <div class="wrap">
+    <span class="who"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAwIDEwMDAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iRmxhZyBvZiBMYXRyZXZpYSI+PGRlZnM+PGNsaXBQYXRoIGlkPSJuIj48cG9seWdvbiBwb2ludHM9IjAsMCAyMDAwLDAgMTU2MCw1MDAgMjAwMCwxMDAwIDAsMTAwMCIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNuKSI+PHJlY3Qgd2lkdGg9IjIwMDAiIGhlaWdodD0iMTAwMCIgZmlsbD0iIzI4NEZDNCIvPjxyZWN0IHdpZHRoPSI2NjEiIGhlaWdodD0iMzgwIiBmaWxsPSIjMDFCNEZGIi8+PHJlY3QgeT0iMTI3IiB3aWR0aD0iNjYxIiBoZWlnaHQ9IjEyNiIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjY2MSIgd2lkdGg9IjIzNyIgaGVpZ2h0PSIxMDAwIi8+PHJlY3QgeT0iMzgwIiB3aWR0aD0iMjAwMCIgaGVpZ2h0PSIyMzkiLz48cmVjdCB4PSI3MjMiIHdpZHRoPSIxMTIiIGhlaWdodD0iMTAwMCIgZmlsbD0iI2ZmZiIvPjxyZWN0IHk9IjQ0MyIgd2lkdGg9IjIwMDAiIGhlaWdodD0iMTEyIiBmaWxsPSIjZmZmIi8+PC9nPjwvc3ZnPg==" alt="Flag of Latrevia" width="26" height="13"><span>An official website of the Federal Republic of Latrevia</span></span>
+    <span class="right">
+      <a href="latrevia.html">Government portal</a>
+      <a href="assembly.html">Federal Assembly</a>
+      <a href="executive-palace.html">Office of the President</a>
+      <a href="commonwealth-courts.html">Commonwealth Courts</a>
+      <time class="js-date">24 Deka 166 AAX</time>
+    </span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 240 190" role="img" aria-label="The Courts of the Federation"><use href="#court"/></svg>
+      <span><b>The Federal Courts</b><span>Federal Republic of Latrevia</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#today">Today</a>
+      <a href="#courts">The courts</a>
+      <a href="#bench">The bench</a>
+      <a href="#review">Constitutional review</a>
+      <a href="#rights">In court</a>
+      <a href="#judges">Judges</a>
+      <a href="#states">State courts</a>
+      <a href="#rulings">Rulings</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <span id="themeLabel">Light mode</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow mono">Judicial branch · <span class="js-date">24 Deka 166 AAX</span></p>
+      <h1>The Courts of the Federation</h1>
+      <p class="lead">Justice in the Federation is done by independent courts. The Supreme Court is the final court of appeal, the Constitutional Court decides whether laws are valid, and appellate and lower courts hear the cases between. Every State also keeps its own court system.</p>
+      <div class="quick">
+        <a class="btn" href="#today">Today at the courts</a>
+        <a class="btn ghost" href="#rights">Your rights in court</a>
+        <a class="btn ghost" href="#rulings">Recent rulings</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg class="dome" viewBox="0 0 240 190" role="img" aria-label="The Court House, Xareionople"><use href="#court"/></svg>
+      <span class="mono">The Court House, Xareionople</span>
+    </div>
+  </div>
+</div>
+<div class="facts-band">
+  <div class="wrap">
+    <dl class="facts-in">
+      <div class="fact"><dt class="mono">Supreme Court</dt><dd>Chief Justice and eight Associates</dd></div>
+      <div class="fact"><dt class="mono">Constitutional Court</dt><dd>Seven judges, twelve-year terms</dd></div>
+      <div class="fact"><dt class="mono">Federal judges serve</dt><dd>Until age 75</dd></div>
+      <div class="fact"><dt class="mono">Appointed by</dt><dd>Civil Service Commission, confirmed by the Senate</dd></div>
+      <div class="fact"><dt class="mono">Sitting</dt><dd>Monday to Fyrday, in term</dd></div>
+    </dl>
+  </div>
+</div>
+
+<section id="today">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Today</span>
+      <h2>Today at the courts</h2>
+      <p>The Supreme Court and the Constitutional Court sit on weekdays during term. The lists below follow the calendar and update through the day.</p>
+    </div>
+    <div class="status" id="liveStatus"><span class="dot"></span><b id="liveHead">In session</b><p id="liveSub"></p></div>
+    <div class="two-col" style="margin-top:36px">
+      <div><h3 class="sub">Supreme Court &middot; list for today</h3><ol class="docket" id="scList"></ol></div>
+      <div><h3 class="sub">Constitutional Court &middot; list for today</h3><ol class="docket" id="ccList"></ol></div>
+    </div>
+    <h3 class="sub" style="margin-top:40px">The week ahead</h3>
+    <div class="tblw"><table class="tbl" id="weekTable"><thead><tr><th>Day</th><th>Supreme Court</th><th>Constitutional Court</th></tr></thead><tbody></tbody></table></div>
+    <p class="note">There are three terms a year: 5 Ixarius to 30 Helius, 10 Nerius to 15 Epta, and 1 Ennia to 20 Dodeka. In recess, only urgent matters are heard: habeas corpus, emergencies and elections.</p>
+  </div>
+</section>
+
+<section id="courts" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Articles 18&ndash;20 and 27</span>
+      <h2>Five kinds of court</h2>
+      <p>The judicial power of the Federation is vested in the Supreme Court, the Constitutional Court, appellate courts and the lower federal courts. The States run courts of their own.</p>
+    </div>
+    <div class="cmp">
+      <div class="cmp-row head"><b></b><div>What it decides</div><div>Final word on</div></div>
+      <div class="cmp-row"><b>Supreme Court</b><div data-h="What it decides">Appeals in every case under federal law and the Constitution. It may strike down any law, regulation or executive act that breaks the Constitution. It hears disputes between States, between a State and the Federation, and cases involving foreign diplomats.</div><div data-h="Final word on">Federal law and the Constitution, on appeal</div></div>
+      <div class="cmp-row"><b>Constitutional Court</b><div data-h="What it decides">Whether federal and State laws are valid, on challenge. It alone settles disputes about the division of powers between the Federation and the States, and may strike down a constitutional amendment that breaks the eternity clauses.</div><div data-h="Final word on">Constitutional validity</div></div>
+      <div class="cmp-row"><b>Appellate courts</b><div data-h="What it decides">Appeals from the lower federal courts, in four circuits that group the States. Most federal appeals end here, and the Supreme Court takes the rest.</div><div data-h="Final word on">Most federal appeals</div></div>
+      <div class="cmp-row"><b>Lower federal courts</b><div data-h="What it decides">Trials of federal offences, federal civil claims and review of federal agencies, with juries in criminal trials.</div><div data-h="Final word on">Facts at trial</div></div>
+      <div class="cmp-row"><b>State courts</b><div data-h="What it decides">Everything within the States&rsquo; reserved powers: most crime, family and property law, local government and the great majority of everyday disputes. Each State has its own court system and constitution.</div><div data-h="Final word on">State law</div></div>
+    </div>
+    <h3 class="sub" style="margin-top:48px">How a case travels</h3>
+    <ol class="steps">
+      <li><h3>Trial</h3><p>In a State court or a lower federal court. A jury sits in criminal trials, and a public defender is provided to anyone who cannot pay.</p></li>
+      <li><h3>Appeal</h3><p>To the State&rsquo;s higher courts, or to the appellate court of the federal circuit.</p></li>
+      <li><h3>Constitutional question</h3><p>Any court hearing a case in which the validity of a law is raised may refer it to the Constitutional Court.</p></li>
+      <li><h3>Supreme Court</h3><p>The final court of appeal under federal law. Its decisions bind every court and public authority.</p></li>
+      <li><h3>Judgment</h3><p>Judgments are given in public and published. Decisions of the Supreme Court bind every court and public authority.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="bench">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Articles 19&ndash;20</span>
+      <h2>The bench</h2>
+      <p>Sixteen judges sit on the two highest courts. Supreme Court justices serve until age 75. Constitutional Court judges serve one non-renewable twelve-year term, so that none can shape a ruling around a future career.</p>
+    </div>
+    <h3 class="sub">Supreme Court</h3>
+    <div class="cab-grid" id="scBench"></div>
+    <h3 class="sub" style="margin-top:48px">Constitutional Court</h3>
+    <div class="cab-grid" id="ccBench"></div>
+    <p class="note">The seven terms end in different years, so the bench is never renewed all at once.</p>
+  </div>
+</section>
+
+<section id="review" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Article 20</span>
+      <h2>Constitutional review</h2>
+      <p>The Constitutional Court is separate from the ordinary appeal courts, so that questions about the Constitution are decided by specialists in public law and not case by case.</p>
+    </div>
+    <div class="profile2">
+      <div class="glance">
+        <h3>Who may petition</h3>
+        <dl class="kv">
+          <div><dt class="mono">The President</dt><dd>On any federal or State law.</dd></div>
+          <div><dt class="mono">The Cabinet</dt><dd>By a reference from the government.</dd></div>
+          <div><dt class="mono">The Assembly</dt><dd>One third of either chamber, the House or the Senate.</dd></div>
+          <div><dt class="mono">A State</dt><dd>Any State government.</dd></div>
+          <div><dt class="mono">A court</dt><dd>Any court hearing a case in which constitutional validity is raised.</dd></div>
+        </dl>
+      </div>
+      <div class="glance">
+        <h3>What a ruling does</h3>
+        <dl class="kv">
+          <div><dt class="mono">Void</dt><dd>A law struck down is void from the date of the ruling.</dd></div>
+          <div><dt class="mono">Delayed</dt><dd>The Court may delay the effect so that the Assembly can correct the law.</dd></div>
+          <div><dt class="mono">Binding</dt><dd>Its decisions bind all other courts and public bodies.</dd></div>
+          <div><dt class="mono">Powers</dt><dd>The Court alone settles disputes between the Federation and the States over the division of powers (Art. 28).</dd></div>
+          <div><dt class="mono">Amendments</dt><dd>It can strike down an amendment that breaks the eternity clauses of Article 54.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="note">Federal law may not tell a State government how to use its reserved powers. The Federation may set minimum standards, and States may exceed them but not fall below them (Art. 28).</p>
+  </div>
+</section>
+
+<section id="rights">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Articles 4, 8 and 9</span>
+      <h2>Your rights in court</h2>
+      <p>These rights are self-executing and enforceable before any court. Several can never be suspended, even in an emergency (Art. 32).</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc"><h3>A fair, public and speedy trial</h3><p>Before an independent court, with the presumption of innocence. No one may be tried twice for the same offence or under a law made after the act.</p></article>
+      <article class="svc"><h3>A lawyer, whatever you earn</h3><p>Free access to the courts and adequate legal assistance may not be denied for poverty. The state provides public defenders, and you must be told you may stay silent.</p></article>
+      <article class="svc"><h3>A judge within 72 hours</h3><p>Everyone arrested must be brought before a judge within 72 hours, and may not be held incommunicado for more than 48. Neither limit can be suspended.</p></article>
+      <article class="svc"><h3>Detention is reviewed</h3><p>Pretrial detention beyond 30 days needs a judge&rsquo;s renewal, and may not run past 18 months without a trial.</p></article>
+      <article class="svc"><h3>Habeas corpus</h3><p>Any person may ask a court to test the lawfulness of a detention. The right survives every emergency.</p></article>
+      <article class="svc"><h3>Confront the evidence</h3><p>The accused may confront the witnesses against them and compel witnesses and evidence to be produced in their defence.</p></article>
+      <article class="svc"><h3>Your own language</h3><p>No one may be disadvantaged in public proceedings for using a recognised regional language: French, Filipinic or the Slavic dialects.</p></article>
+      <article class="svc"><h3>No death penalty</h3><p>Capital punishment is permanently abolished. No person shall be executed by the state, and no amendment can bring it back.</p></article>
+      <article class="svc"><h3>Jury service</h3><p>Citizens serve on juries when summoned, subject to lawful exemptions. It is a duty of every citizen under Article 9.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="judges" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Articles 18, 22 and 26</span>
+      <h2>Independent judges</h2>
+      <p>Judges are chosen for merit, not for loyalty, and can be removed only by impeachment.</p>
+    </div>
+    <div class="profile2">
+      <div class="glance">
+        <h3>Appointment and tenure</h3>
+        <dl class="kv">
+          <div><dt class="mono">Chosen by</dt><dd>The Civil Service Commission, on merit.</dd></div>
+          <div><dt class="mono">Confirmed by</dt><dd>The Senate.</dd></div>
+          <div><dt class="mono">Serves</dt><dd>Until age 75 or voluntary retirement. Constitutional Court judges serve one twelve-year term.</dd></div>
+          <div><dt class="mono">Timing</dt><dd>No appointments in the last six months of a presidential term, unless a death or incapacity creates a vacancy.</dd></div>
+          <div><dt class="mono">Disclosure</dt><dd>Financial interests are published every year.</dd></div>
+          <div><dt class="mono">Barred from</dt><dd>Practising law, holding any other public office, or taking part in politics.</dd></div>
+        </dl>
+      </div>
+      <div class="glance">
+        <h3>Accountability</h3>
+        <dl class="kv">
+          <div><dt class="mono">Investigated by</dt><dd>The Control Commission, which can investigate any judge for corruption, abuse of power or gross incompetence.</dd></div>
+          <div><dt class="mono">Impeachment</dt><dd>Two thirds of the House to impeach.</dd></div>
+          <div><dt class="mono">Removal</dt><dd>A separate two-thirds vote of the Senate, after a trial presided over by the Chief Justice.</dd></div>
+          <div><dt class="mono">Surveillance</dt><dd>Only a federal judge may issue a warrant to collect personal data. A senior judge is designated Intelligence Review Judge and may order unlawful data destroyed.</dd></div>
+          <div><dt class="mono">Report</dt><dd>An independent judicial panel reviews all warrants each year and a summary is published.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="oathbox">
+      <p class="mono">The oath of judges</p>
+      <blockquote><p>I do solemnly swear that I will faithfully and impartially discharge the duties of my office; that I will uphold and defend the Constitution of the Third Republic against all enemies, foreign and domestic; that I will place the public interest above personal advantage; and that if ever I am ordered to act against the Constitution, I will refuse.</p></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="states">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Articles 27&ndash;30</span>
+      <h2>State courts and the four circuits</h2>
+      <p>Each of the 26 States has its own constitution, government and court system. Federal appeals are heard in four circuits, each grouping the States of one part of the Federation.</p>
+    </div>
+    <div class="keys" id="circKeys"></div>
+    <div class="state-grid" id="stateGrid"></div>
+    <p class="s-detail" id="circDetail" aria-live="polite"></p>
+    <ul class="plist" style="margin-top:28px">
+      <li><span>Full faith and credit</span><span class="mono">Art. 29</span></li>
+      <li><span>Extradition between States within 30 days</span><span class="mono">Art. 29</span></li>
+      <li><span>State police, within federal minimum standards</span><span class="mono">Art. 30</span></li>
+      <li><span>The Federal Police Service investigates federal offences</span><span class="mono">Art. 30</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="rulings" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Judgments and rulings</span>
+      <h2>Recent rulings</h2>
+      <p>Decisions handed down in the last fortnight of sittings. Supreme Court judgments are handed down on Winsdays and Constitutional Court rulings on Fyrdays.</p>
+    </div>
+    <div class="keys" id="rulKeys"></div>
+    <ul class="news" id="rulList"></ul>
+  </div>
+</section>
+
+<section id="beyond">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Articles 49&ndash;51</span>
+      <h2>Beyond the Federation</h2>
+      <p>The Commonwealth has courts of its own, which hear disputes under the Charter. The Constitution of the Third Republic stays the supreme law in internal governance, individual rights and the structure of the five branches.</p>
+    </div>
+    <ul class="plist">
+      <li><span>Disputes between the Federation and Solaria, or Commonwealth institutions, go to the Commonwealth High Court</span><span class="mono">Art. 51</span></li>
+      <li><span>The Federal Assembly is told within seven days of any Commonwealth ruling that affects the rights of Federal citizens</span><span class="mono">Art. 51</span></li>
+      <li><span>No Commonwealth institution may require the Federation to break its fundamental rights or its anti-theocracy provisions</span><span class="mono">Art. 51</span></li>
+      <li><span>In a conflict between the Charter and the Constitution, the Commonwealth Constitutional Court decides, after hearing the opinion of this Federation&rsquo;s Constitutional Court</span><span class="mono">Art. 49</span></li>
+    </ul>
+  </div>
+</section>
+</main>
+<div id="caseView" class="cv" hidden></div>
+
+<footer>
+  <div class="wrap">
+    <div class="marks">
+      <img src="data:image/png;base64,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" alt="Emblem of the Federal Republic of Latrevia" width="60" height="60">
+      <svg viewBox="0 0 240 190" aria-hidden="true"><use href="#court"/></svg>
+    </div>
+    <div>
+      <b>The Federal Courts</b>
+      <p>Federal Republic of Latrevia. The judicial branch of the Federation: the Supreme Court, the Constitutional Court, appellate courts and the lower federal courts (Arts. 18&ndash;20). Latrevian English is the official language, and French, Filipinic and the Slavic dialects are protected heritage languages (Art. 1).</p>
+      <p>Public office is a public trust (Art. 5-B). <a href="latrevia.html">Latrevia government portal</a> · <a href="assembly.html">Federal Assembly</a> · <a href="executive-palace.html">Office of the President</a> · <a href="commonwealth-courts.html">Commonwealth Courts</a></p>
+      <p class="motto">Iustitia. Libertas. Aequitas.</p>
+      <p style="margin-top:14px;opacity:.75">Last viewed <span class="js-date">24 Deka 166 AAX</span>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+var MONTHS=['Ixarius','Savrius','Caspius','Helius','Nerius','Kiomus','Epta','Exsilius','Ennia','Deka','Endeka','Dodeka'];
+var WD=['Sunday','Monday','Stasday','Wawsday','Winsday','Fyrday','Erday'];
+var NOW=(function(){var m=/[?&]now=(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(location.search);return m?new Date(+m[1],+m[2]-1,+m[3],+m[4],+m[5]):new Date()})();
+function p2(n){return (n<10?'0':'')+n}
+function dstr(d){return d.getDate()+' '+MONTHS[d.getMonth()]+' '+(d.getFullYear()-1860)+' AAX'}
+function dshort(d){return WD[d.getDay()]+' '+d.getDate()+' '+MONTHS[d.getMonth()]}
+function addDays(d,n){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+n);return x}
+document.querySelectorAll('.js-date').forEach(function(el){el.textContent=dstr(NOW)});
+
+/* theme */
+var root=document.documentElement,btn=document.getElementById('themeBtn'),lab=document.getElementById('themeLabel');
+function applyTheme(t){root.setAttribute('data-theme',t);var l=t==='light';btn.setAttribute('aria-pressed',String(l));lab.textContent=l?'Dark mode':'Light mode'}
+var stored=null;try{stored=localStorage.getItem('latrevia-theme')}catch(e){}
+var mq=window.matchMedia?matchMedia('(prefers-color-scheme: light)'):null;
+applyTheme(stored||(mq&&mq.matches?'light':'dark'));
+if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!stored)applyTheme(e.matches?'light':'dark')});
+btn.addEventListener('click',function(){var n=root.getAttribute('data-theme')==='light'?'dark':'light';applyTheme(n);stored=n;try{localStorage.setItem('latrevia-theme',n)}catch(e){}});
+
+/* terms */
+var TERMS=[[5,330,'First term'],[1010,1515-100+100,'Second term'],[1801,3120,'Third term']];
+TERMS=[[0*100+5,3*100+30,'First term'],[4*100+10,6*100+15,'Second term'],[8*100+1,11*100+20,'Third term']];
+function ord(d){return d.getMonth()*100+d.getDate()}
+function termOf(d){var o=ord(d);for(var i=0;i<3;i++)if(o>=TERMS[i][0]&&o<=TERMS[i][1])return i;return -1}
+function sitting(d){var w=d.getDay();return w>=1&&w<=5&&termOf(d)>=0}
+function termDate(i,end,y){var o=TERMS[i][end?1:0];return new Date(y,Math.floor(o/100),o%100)}
+
+/* rng */
+function RNG(seed){var a=seed>>>0;function n(){a=(a+0x6D2B79F5)>>>0;var t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}
+ var r={f:n,i:function(lo,hi){return lo+Math.floor(n()*(hi-lo+1))},p:function(l){return l[Math.floor(n()*l.length)]},
+ sh:function(l){var x=l.slice();for(var i=x.length-1;i>0;i--){var j=Math.floor(n()*(i+1));var t=x[i];x[i]=x[j];x[j]=t}return x}};return r}
+function dseed(d,salt){return d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate()+salt*7919}
+
+/* pools */
+var FN=['Amara','Teodor','Lucia','Mateus','Ilse','Renaud','Corazon','Anton','Vesna','Joaquim','Delphine','Nikolai','Rosalind','Emeka','Paloma','Casper','Marisol','Dmitri','Odette','Liam'];
+var LN=['Okonkwo-Reyes','Vasquez','Lindqvist','Marchand','Petrov','Dalisay','Hartwell','Moreau','Kozlowski','Abendroth','Santiago','Brennan','Ferrante','Tolentino','Rousseau','Halvorsen','Mbeki','Castillo','Volkov','Aquino'];
+var FIRMS=['Cormorant Rail Holdings','Harbourline Freight Ltd','Saltmarsh Fisheries Ltd','Ironwood Timber Company','Gulfstar Shipping','Kestrel Aviation Services','Amberfield Foods','Northgate Construction','Calder & Wyn Mining','Sunridge Energy','Tessaly Water Services','Brightwater Dairy Cooperative'];
+var MIN=['Minister of Transport','Minister of Agriculture','Minister of Housing','Minister of Labour','Minister of Justice','Minister of Finance'];
+var STATES=[
+    ['Erimos', 'centre', 'Desert', 'Home of the capital districts of Xareionople, Carai and Latreionople on the Gulf of Latreionople.'],
+    ['Lancia', 'corridor', 'Mixed', 'The corridor’s largest state: savanna in the west, desert in the east, and a port on the Gulf of Lancia.'],
+    ['Duaterre', 'corridor', 'Mixed', 'Desert in the north cut by the Duaterre River, forest and grassland in the south.'],
+    ['Baybay', 'corridor', 'Desert', 'Solid desert across its northern two thirds. A Filipinic-speaking state.'],
+    ['Alexagrad', 'corridor', 'Savanna', 'Savanna around Niklas Hill and the Straits of Alexagrad, once known as the Nicklasburg region.'],
+    ['Heliosberg', 'corridor', 'Mixed', 'Savanna, desert and forest around Lake Heliosberg. Successor to the old state of Matthewsburg.'],
+    ['Bahsin', 'corridor', 'Savanna', 'Golden savanna on the corridor’s southern edge, facing Luisara.'],
+    ['Aronia', 'corridor', 'Grassland', 'The greenest state of the corridor, with Mt. Caius inside its borders.'],
+    ['New Solaris', 'west', 'Savanna', 'Northwest anchor of the savanna corridor, on the edge of the northern wilderness.'],
+    ['New Erimos', 'west', 'Desert', 'Desert with forested coastal edges, on the corridor’s western flank.'],
+    ['New Latrei', 'west', 'Forest', 'Forested state with a strong Solarian cultural heritage. Successor to New Luisitro.'],
+    ['Haradia', 'west', 'Savanna', 'Savanna with a rugged interior of hills and badlands.'],
+    ['Northern Commonwealth', 'north', 'Mixed', 'Straddles forest and desert. Its founding districts are Ezechiel, Orientales, Prado and Leyan.'],
+    ['Las Matthias', 'north', 'Forest', 'A walled river city and its forest hinterland, northeast of the capital.'],
+    ['Stadtrand', 'north', 'Forest', 'The edge of the settled forest, where the eastern highlands begin.'],
+    ['Grasig', 'east', 'Grassland', 'Open plains, rivers and lakes in the northeast.'],
+    ['Akazie', 'east', 'Highland', 'The region’s true highland state, with grey stone and mountain terrain.'],
+    ['Ezvill', 'east', 'Grassland', 'The northeasternmost mainland state, its coast broken into small green islands.'],
+    ['Etaiga', 'east', 'Mixed', 'Plains and forest in the Etaiga Hills, south of the Mt. Xarpeius territory.'],
+    ['Desierto Oriente', 'east', 'Mixed', 'Green plains, a savanna patch and a small desert in its southeast corner.'],
+    ['Paradeisos', 'east', 'Island', 'An island state in the far northeast, admitted to the Third Republic by negotiation.'],
+    ['Zufällig', 'southeast', 'Grassland', 'Mixed grass and light forest between the highlands and the frontier.'],
+    ['Grenzgebiet', 'southeast', 'Forest', 'The frontier state, facing Bambu and the Sea of Xarvaii.'],
+    ['Zwei Dörfer', 'southeast', 'Mixed', 'The easternmost labelled state, on a grass and forest coast.'],
+    ['Xarvaii', 'southeast', 'Forest', 'Island and coastal state beside the Great Xarvaii Icepatch.'],
+    ['Bambu', 'southeast', 'Grassland', 'Grass and forest country. The Isles of the South lie off its coast.']
+  ];
+var SN=STATES.map(function(s){return s[0]});
+function person(r){return r.p(FN)+' '+r.p(LN)}
+function firm(r){return r.p(FIRMS)}
+function two(r,list){var a=r.p(list),b;do{b=r.p(list)}while(b===a);return [a,b]}
+
+/* case templates: each returns {t,q,a,b,art} ; a = allowed/upheld text, b = dismissed text */
+var SCT=[
+ function(r){var h=r.i(80,130);return{t:person(r)+' v. Federation',q:'Whether a delay of '+h+' hours before the accused saw a judge broke the 72-hour rule.',a:'The Court held that the delay broke Article 8 and excluded the statements made during it.',b:'The Court held that the delay was lawfully explained by a transfer between States and dismissed the appeal.',art:'Art. 8'}},
+ function(r){return{t:person(r)+' v. Federal Police Service',q:'Whether pretrial detention that passed 30 days without a judge’s renewal was lawful.',a:'The Court ordered release and held that a renewal after the 30th day cannot cure the gap.',b:'The Court found a renewal had been granted in time and dismissed the appeal.',art:'Art. 8'}},
+ function(r){return{t:person(r)+' v. Civil Service Commission',q:'Whether the scoring of a federal examination followed the published standards of the Examination Standards Act.',a:'The Court held the scoring departed from the published standards and ordered the results re-marked.',b:'The Court held the Commission had followed its published standards and dismissed the appeal.',art:'Art. 23'}},
+ function(r){var s=two(r,SN);return{t:'State of '+s[0]+' v. State of '+s[1],q:'Whether a person wanted in one State had to be handed over within the 30 days that Article 29 allows.',a:'The Court ordered the handover and held that the 30 days run from the first request.',b:'The Court held that the request was incomplete and the 30 days had not begun to run.',art:'Art. 29'}},
+ function(r){var f=two(r,FIRMS),s=two(r,SN);return{t:f[0]+' v. '+f[1],q:'Whether a judgment of a court of '+s[0]+' had to be enforced in '+s[1]+' without a new hearing.',a:'The Court held that full faith and credit applies and ordered the judgment enforced.',b:'The Court held the original court had no jurisdiction, so the duty did not arise.',art:'Art. 29'}},
+ function(r){return{t:firm(r)+' v. Federal Media Authority',q:'Whether a refusal to approve a change of ownership was consistent with the Media Ownership Act.',a:'The Court held that the refusal went beyond the Act and set it aside.',b:'The Court held that the Authority had acted within the Act and dismissed the appeal.',art:'Art. 42'}},
+ function(r){var s=r.p(SN);return{t:person(r)+' v. State of '+s,q:'Whether a litigant could be refused a hearing in a recognised heritage language in a State court.',a:'The Court held that no one may be disadvantaged for using a recognised language and ordered a new hearing.',b:'The Court held an interpreter had been offered and the hearing was fair.',art:'Art. 1'}},
+ function(r){return{t:'Cormorant Rail Holdings v. Minister of Transport',q:'Whether a safety order was valid under the Rail Safety Act.',a:'The Court held the order exceeded the Act and quashed it.',b:'The Court upheld the order as a lawful use of the Act.',art:'Art. 18'}},
+ function(r){return{t:firm(r)+' v. Harbour Authority of Latreionople',q:'Whether a new tariff of berth charges was lawful under the Harbour Fees Act.',a:'The Court held that the tariff was higher than the Act allows and ordered a refund.',b:'The Court held that the tariff was within the Act and dismissed the appeal.',art:'Art. 18'}},
+ function(r){var s=r.p(SN);return{t:'State of '+s+' v. '+firm(r),q:'Whether an allocation of river water was consistent with the Water Rights Act.',a:'The Court held that the allocation broke the Act and sent it back for a fresh decision.',b:'The Court upheld the allocation as consistent with the Act.',art:'Art. 18'}},
+ function(r){return{t:person(r)+' v. Housing Authority',q:'Whether a tenant could be removed from public housing while an appeal was pending under the Public Housing Act.',a:'The Court held the removal premature and restored the tenancy until the appeal ends.',b:'The Court held the Act allowed removal and dismissed the appeal.',art:'Art. 18'}},
+ function(r){return{t:firm(r)+' v. '+r.p(MIN),q:'Whether a licence under the Coastal Pilotage Act could be withdrawn without a hearing.',a:'The Court held a hearing was required and set the withdrawal aside.',b:'The Court held the withdrawal followed a proper hearing and dismissed the appeal.',art:'Art. 18'}}
+];
+var CCT=[
+ function(r){var s=r.p(SN);return{t:'State of '+s+' v. Federation',q:'Whether the federal minimum in the Living Wage Act left the States room to set a higher wage.',a:'The Court held that the Federation may set a minimum, and States may exceed it but not fall below it.',b:'The Court held that the Act overstepped the States’ reserved powers in part, and struck the provision down.',art:'Art. 28',mode:'dp'}},
+ function(r){var s=r.p(SN);return{t:'State of '+s+' v. Federation',q:'Whether the Federal Police Service Act told a State how to run its own police.',a:'The Court held that the Act set only minimum standards and was valid.',b:'The Court held that the Act reached into the State’s own police and struck the provision down.',art:'Art. 28 and 30',mode:'dp'}},
+ function(r){return{t:'Petition of one third of the House: Public Housing Act',q:'Whether the repeal of a protection in the Act was a regression that Article 5 forbids.',a:'The Court held that the repeal was a regression and struck it down.',b:'The Court held that an equal protection remained and upheld the repeal.',art:'Art. 5',mode:'pet'}},
+ function(r){return{t:'Petition of one third of the Senate: Boundary Commission Act',q:'Whether a criterion in the Act for drawing districts favoured one party, which Article 17 forbids.',a:'The Court held that the criterion favoured one party and struck it down.',b:'The Court held that the criterion applied equally to all parties and upheld it.',art:'Art. 17',mode:'pet'}},
+ function(r){return{t:'Petition of one third of the House: Sectoral Lists Act',q:'Whether the registration rules kept the sectoral seats at twenty percent of the House.',a:'The Court held that the rules could cut the share below twenty percent and struck them down.',b:'The Court held that the rules kept the share at twenty percent and upheld them.',art:'Art. 17',mode:'pet'}},
+ function(r){return{t:'Reference by the Cabinet: Grain Reserve Act',q:'Whether the Act’s power to take stock from private stores met the property guarantees.',a:'The Court held that the power needs prompt and fair compensation and read that in.',b:'The Court held that the power already included fair compensation and upheld the Act.',art:'Art. 39',mode:'ref'}},
+ function(r){var s=r.p(SN);return{t:'Referral from the High Court of '+s+': Media Ownership Act',q:'Whether a cap on cross-ownership was consistent with the freedom of the press.',a:'The Court held that the cap went further than needed and struck it down.',b:'The Court held that the cap was proportionate and upheld it.',art:'Art. 41 and 42',mode:'ref'}},
+ function(r){return{t:'Application of the Control Commission to classify a finding',q:'Whether a finding could be classified for national security, which needs the Court’s approval and may last no more than five years.',a:'The Court approved classification for '+r.i(2,5)+' years.',b:'The Court refused, finding no harm that outweighed the public’s right to know.',art:'Art. 26',mode:'app'}}
+];
+
+function genCase(kind,d,idx){var r=RNG(dseed(d,kind*31+idx+3));var T=kind?CCT:SCT;var perm=RNG(dseed(d,kind+91)).sh(T.map(function(_,i){return i}));var ti=perm[(idx%10)%T.length];var c=T[ti](r);c.ti=ti;c.allow=r.f()<0.5;var n=kind?7:9;
+ if(r.f()<0.3){c.vote=n+'–0'}else{var lo=r.i(1,Math.floor((n-1)/2));c.vote=(n-lo)+'–'+lo}
+ if(kind){c.out=c.allow?c.a:c.b}else{c.out=c.allow?c.a:c.b}
+ c.kind=kind;return c}
+function ymd(d){return d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate()}
+function dayPlan(d){ if(!sitting(d))return null;var w=d.getDay();
+ var p={sc:[],cc:[],scMode:'hear',ccMode:'chambers'};
+ if(w===4){p.scMode='judg';for(var i=0;i<RNG(dseed(d,5)).i(2,3);i++)p.sc.push(genCase(0,d,i))}
+ else{var n=RNG(dseed(d,6)).i(2,3);for(var j=0;j<n;j++)p.sc.push(genCase(0,d,j))}
+ if(w===3||w===4){p.ccMode='hear';var m=2;for(var k=0;k<m;k++)p.cc.push(genCase(1,d,k+10))}
+ if(w===5){p.ccMode='rule';var q=RNG(dseed(d,7)).i(1,2);for(var l=0;l<q;l++)p.cc.push(genCase(1,d,l+20))}
+ p.sc.forEach(function(c,i){c.id='s'+ymd(d)+'-'+i;c.d=d;c.ix=i});p.cc.forEach(function(c,i){c.id='c'+ymd(d)+'-'+i;c.d=d;c.ix=i});
+ return p}
+
+var NOWMIN=NOW.getHours()*60+NOW.getMinutes();
+function hm(t){return p2(Math.floor(t/60))+':'+p2(t%60)}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function nextSitting(d){var x=d;for(var i=0;i<200;i++){if(sitting(x))return x;x=addDays(x,1)}return null}
+var TODAYD=new Date(NOW.getFullYear(),NOW.getMonth(),NOW.getDate());
+
+/* status */
+(function(){var head=document.getElementById('liveHead'),sub=document.getElementById('liveSub'),dot=document.querySelector('#liveStatus .dot');
+ var ti=termOf(TODAYD),y=TODAYD.getFullYear();
+ if(ti>=0){var e=termDate(ti,1,y);head.textContent=TERMS[ti][2]+' in progress';sub.textContent=(sitting(TODAYD)?'The courts sit today, '+dshort(TODAYD)+'.':'The courts do not sit at weekends.')+' The term ends on '+dstr(e)+'.'}
+ else{var nx=null;for(var k=0;k<3;k++){var s=termDate(k,0,y);if(s>TODAYD){nx=s;break}}if(!nx)nx=termDate(0,0,y+1);
+  head.textContent='In recess';sub.textContent='Only urgent matters are heard: habeas corpus, emergencies and elections. The next term opens on '+dstr(nx)+'.';dot.style.background='var(--gold)'}
+})();
+
+/* today lists */
+function lists(){var D=sitting(TODAYD)?TODAYD:nextSitting(TODAYD);var scL=document.getElementById('scList'),ccL=document.getElementById('ccList');
+ if(!D){scL.innerHTML='<li class="none">No sitting is listed.</li>';ccL.innerHTML=scL.innerHTML;return}
+ var p=dayPlan(D),isToday=D.getTime()===TODAYD.getTime();
+ var lab=document.createElement('p');lab.className='note';lab.style.marginTop='0';
+ lab.textContent=isToday?('Lists for '+dshort(D)+'.'):('No sitting today. Showing the next sitting day, '+dshort(D)+'.');
+ document.getElementById('today').querySelector('.status').insertAdjacentElement('afterend',lab);
+ function row(c,time,mode,room){var st,cls;var t=time;
+  if(!isToday){st='Listed';cls='l'}
+  else if(mode==='judg'||mode==='rule'){if(NOWMIN>=t){st='Delivered';cls='d'}else{st='Due '+hm(t);cls='l'}}
+  else{if(NOWMIN>=t+90){st='Heard';cls='d'}else if(NOWMIN>=t){st='Hearing';cls='h'}else{st='Listed';cls='l'}}
+  var body=(mode==='judg'||mode==='rule')&&isToday&&NOWMIN>=t?esc(c.out):esc(c.q);
+  return '<li><span class="tm mono">'+hm(t)+'</span><div><h4><a class="cl" href="#/case/'+c.id+'">'+esc(c.t)+'</a></h4><p>'+body+'</p><span class="meta mono">'+esc(room)+' · '+esc(c.art)+'</span></div><span class="st '+cls+'">'+st+'</span></li>'}
+ var s='';p.sc.forEach(function(c,i){var t=p.scMode==='judg'?570+i*20:600+i*90;s+=row(c,t,p.scMode,'Courtroom '+(i+1))});
+ scL.innerHTML=s||'<li class="none">No sitting.</li>';
+ var q='';
+ if(p.ccMode==='chambers')q='<li class="none">The Court sits in chambers today. No public list.</li>';
+ else p.cc.forEach(function(c,i){var t=p.ccMode==='rule'?840+i*20:(i===0?600:840);q+=row(c,t,p.ccMode,'Constitutional Chamber')});
+ ccL.innerHTML=q;
+ var h=document.getElementById('scList').previousElementSibling;
+ h.textContent='Supreme Court · '+(p.scMode==='judg'?'judgments':'list')+(isToday?' for today':'');
+ var h2=document.getElementById('ccList').previousElementSibling;
+ h2.textContent='Constitutional Court · '+(p.ccMode==='rule'?'rulings':p.ccMode==='hear'?'list':'chambers')+(isToday?' for today':'');
+}
+lists();
+
+/* week table */
+(function(){var tb=document.querySelector('#weekTable tbody');var base=TODAYD,w=base.getDay();var mon=addDays(base,w===0?1:(w===6?2:1-w));var h='';
+ for(var i=0;i<5;i++){var d=addDays(mon,i),p=dayPlan(d),isT=d.getTime()===TODAYD.getTime();var a,b;
+  if(!p){a=b='Recess';}else{a=p.scMode==='judg'?'Judgments 09:30 ('+p.sc.length+')':p.sc.length+' hearings';b=p.ccMode==='hear'?p.cc.length+' hearings':p.ccMode==='rule'?'Rulings 14:00 ('+p.cc.length+')':'In chambers'}
+  h+='<tr'+(isT?' class="now"':'')+'><td>'+dshort(d)+'</td><td>'+a+'</td><td>'+b+'</td></tr>'}
+ tb.innerHTML=h})();
+
+/* bench */
+var SC=[['Helene Varga-Montrose','Chief Justice','Appointed 164 AAX. Former President of the Capital appellate court.','HV'],
+['Tomás Aurelio Brandt','Associate Justice','Appointed 164 AAX. Public law, formerly a professor of constitutional law.','TB'],
+['Ingrid Sokolova','Associate Justice','Appointed 164 AAX. Criminal procedure and detention law.','IS'],
+['Kasimir Dellmore','Associate Justice','Appointed 165 AAX. Commercial and maritime law.','KD'],
+['Perpetua Ocampo-Reyes','Associate Justice','Appointed 164 AAX. Family and State court experience in Baybay.','PO'],
+['Rhys Adeyemi Calloway','Associate Justice','Appointed 164 AAX. Administrative law and the Civil Service.','RC'],
+['Mirela Stanescu-Lund','Associate Justice','Appointed 165 AAX. Water, land and resource disputes.','MS'],
+['Étienne Marchetti','Associate Justice','Appointed 165 AAX. Media law and freedom of expression.','EM'],
+['Benedikt Aranjuez','Associate Justice','Appointed 166 AAX. Former public defender.','BA']];
+var CC=[['Sabine Oyelaran-Voss','President of the Court','Appointed 164 AAX. Term ends 176 AAX. Constitutional scholar.','SO'],
+['Ruben Almendral-Hale','Judge','Appointed 164 AAX. Term ends 176 AAX. Division of powers.','RA'],
+['Anneliese Kovač','Judge','Appointed 165 AAX. Term ends 177 AAX. Rights and equality law.','AK'],
+['Leopold Nwosu-Draper','Judge','Appointed 165 AAX. Term ends 177 AAX. Electoral and parliamentary law.','LN'],
+['Teodora Pangilinan','Judge','Appointed 165 AAX. Term ends 177 AAX. Social and economic rights.','TP'],
+['Marcel Fontaine-Orsini','Judge','Appointed 166 AAX. Term ends 178 AAX. Federal and State finance.','MF'],
+['Yusuf Halloran-Beck','Judge','Appointed 166 AAX. Term ends 178 AAX. Security and civil liberties.','YH']];
+function bench(id,list,col){var el=document.getElementById(id),h='';list.forEach(function(x){h+='<article class="min" style="--c:'+col+'"><div class="min-top"><span class="mono-box">'+x[3]+'</span><div><h3>'+esc(x[0])+'</h3><div class="role mono">'+x[1]+'</div></div></div><p>'+esc(x[2])+'</p></article>'});el.innerHTML=h}
+bench('scBench',SC,'var(--gold)');bench('ccBench',CC,'var(--sky)');
+
+/* circuits */
+var CIRC={cap:['Capital Circuit',['centre','north'],'Sits at the Court House in Xareionople.'],cor:['Corridor Circuit',['corridor'],'Covers the desert corridor from the Gulf of Lancia to the southern edge.'],wst:['Western Circuit',['west'],'Covers the western approach.'],est:['Eastern Circuit',['east','southeast'],'Covers the northeast, the east and the southeast frontier.']};
+var REGN={centre:'Capital region',corridor:'Desert corridor',west:'Western approach',north:'North of the capital',east:'Northeast and east',southeast:'Southeast frontier'};
+function circOf(reg){for(var k in CIRC)if(CIRC[k][1].indexOf(reg)>=0)return k;return 'cap'}
+(function(){var keys=document.getElementById('circKeys'),grid=document.getElementById('stateGrid'),det=document.getElementById('circDetail'),cur=null;
+ var cnt={};STATES.forEach(function(s){var c=circOf(s[1]);cnt[c]=(cnt[c]||0)+1});
+ var h='';STATES.forEach(function(s){var c=circOf(s[1]);h+='<div class="stt" data-c="'+c+'"><b>'+esc(s[0])+'</b><span class="mono">'+CIRC[c][0].replace(' Circuit','')+'</span></div>'});grid.innerHTML=h;
+ function show(){grid.querySelectorAll('.stt').forEach(function(e){e.style.opacity=(!cur||e.getAttribute('data-c')===cur)?1:.28});
+  keys.querySelectorAll('.chip').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-c')===cur))});
+  if(!cur){det.innerHTML='Choose a circuit to see which States it covers. '+STATES.length+' States, four circuits.';return}
+  var names=STATES.filter(function(s){return circOf(s[1])===cur}).map(function(s){return s[0]});
+  det.innerHTML='<b>'+CIRC[cur][0]+'</b> · '+names.length+' States: '+names.join(', ')+'. '+CIRC[cur][2]}
+ Object.keys(CIRC).forEach(function(k){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('data-c',k);b.setAttribute('aria-pressed','false');b.innerHTML=CIRC[k][0]+' <span class="n">'+cnt[k]+'</span>';b.addEventListener('click',function(){cur=cur===k?null:k;show()});keys.appendChild(b)});
+ show()})();
+
+/* rulings feed */
+(function(){var feed=document.getElementById('rulList'),keys=document.getElementById('rulKeys'),items=[];
+ for(var i=0;i<=21;i++){var d=addDays(TODAYD,-i);if(!sitting(d))continue;var w=d.getDay();var p=dayPlan(d);if(!p)continue;
+  var mins=null,list=null,kind=null;
+  if(w===4){list=p.sc;kind=0;mins=570}else if(w===5){list=p.cc;kind=1;mins=840}else continue;
+  list.forEach(function(c,j){var t=mins+j*20,dt=new Date(d.getFullYear(),d.getMonth(),d.getDate(),Math.floor(t/60),t%60);if(dt>NOW)return;
+   items.push({dt:dt,kind:kind,when:dshort(d)+' · '+hm(t),c:c})})}
+ items.sort(function(a,b){return b.dt-a.dt});items=items.slice(0,14);
+ var cur=null,n=[0,0];items.forEach(function(x){n[x.kind]++});
+ var CH=[['Supreme Court',0],['Constitutional Court',1]];
+ function draw(){var h='';items.forEach(function(x){if(cur!==null&&x.kind!==cur)return;var c=x.c;h+='<li><span class="when">'+x.when+'</span><div><h3><a class="cl" href="#/case/'+c.id+'">'+esc(c.t)+'</a></h3><p>'+esc(c.out)+' Vote '+c.vote+'.</p><span class="tag mono">'+(x.kind?'Constitutional Court':'Supreme Court')+' · '+esc(c.art)+'</span></div></li>'});
+  feed.innerHTML=h||'<li><span class="when"></span><div><p>No rulings in this period. The courts may be in recess.</p></div></li>';
+  keys.querySelectorAll('.chip').forEach(function(b){b.setAttribute('aria-pressed',String(+b.getAttribute('data-k')===cur))})}
+ CH.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('data-k',c[1]);b.setAttribute('aria-pressed','false');b.innerHTML='<i style="--c:'+(c[1]?'var(--sky)':'var(--gold)')+'"></i>'+c[0]+' <span class="n">'+n[c[1]]+'</span>';b.addEventListener('click',function(){cur=cur===c[1]?null:c[1];draw()});keys.appendChild(b)});
+ draw()})();
+
+/* case detail */
+var SCD=[
+ ['The accused was arrested in one State and moved to another. Counsel said the move used up the time allowed before a judge was seen.','Article 8 sets 72 hours as a hard limit and lets no emergency suspend it. A transfer between States is a matter for the police to plan around, not an excuse.','The Court accepted that the transfer was unavoidable and that the accused saw a judge as soon as the courts opened.'],
+ ['The accused had been held more than 30 days. A renewal order was signed, but counsel said it came after the period had run out.','Detention beyond 30 days needs a judge’s renewal before the period ends. A later order cannot make the earlier days lawful.','The record showed the renewal was signed inside the 30 days, and the paperwork had been served late, which does not affect its validity.'],
+ ['The applicant sat a federal examination and said the marks given did not follow the scheme the Commission had published in advance.','The Examination Standards Act ties the Commission to its published scheme. Where it departs from the scheme, the results cannot stand.','The Court compared the marks with the published scheme and found they matched, so there was no ground to disturb the results.'],
+ ['One State asked another to hand over a person wanted for trial. The second State said the request was not in order and so the 30 days had not started.','Article 29 sets 30 days for extradition between States. A request that names the person and the charge is complete, and the time runs from receipt.','The request did not name the charge, so it could not start the clock. The Court noted that States should cure such gaps quickly.'],
+ ['A creditor won a judgment in one State and tried to enforce it in another. The debtor said the first court never had power to decide the dispute.','Article 29 requires every State to give full faith and credit to the judgments of the others. A State may not re-open the merits.','The Court held that the first court lacked jurisdiction over the debtor, and a judgment given without jurisdiction does not travel.'],
+ ['The Authority refused to approve a sale of broadcast interests. The buyer said the Media Ownership Act did not allow the refusal on the grounds the Authority gave.','The Act lists the grounds on which a transfer can be refused, and the Authority may not add its own. The refusal rested on a ground outside the list.','The Authority gave reasons that fall within the Act, and the Court will not substitute its view of the market.'],
+ ['A litigant spoke a recognised heritage language and asked for the hearing, or an interpreter, in that language. The State court refused.','Article 1 protects the recognised languages, and no one may be disadvantaged in public proceedings for using one. A hearing that cannot be followed is not a fair one.','The State court had provided a qualified interpreter at its own expense, so the litigant was able to follow and take part in the hearing.'],
+ ['The Minister ordered a change to track inspection after an incident. The operator said the order went further than the Rail Safety Act allows.','The Act lets the Minister set standards but not take over the operator’s management. The order did the second.','The order set a standard and left the method to the operator, which is what the Act provides.'],
+ ['The Harbour Authority raised its berth charges. The shipping company said the new tariff was higher than the Harbour Fees Act permits.','The Act caps charges at the cost of the service plus a stated margin. The new tariff exceeded that figure.','The Authority’s accounts showed the tariff was within the cap, so the Act was respected.'],
+ ['A State set the allocation of river water between farms and a company. The State said the Water Rights Act was respected, and the other side said it was not.','The Act puts household and farm use first. The allocation did not show that this had been weighed.','The allocation did put household and farm use first, and the Court gave weight to the State’s expert evidence.'],
+ ['A tenant was told to leave public housing while an appeal against the decision was still open.','The Public Housing Act protects a tenant until the appeal ends. Removing the tenant earlier defeats the purpose of an appeal.','The Act lets the Authority act at once where a tenant has stopped paying after a warning, and that was the case here.'],
+ ['A licence to guide ships into harbour was withdrawn. The holder said no hearing was held first.','A person must be heard before a licence is taken away. The Coastal Pilotage Act does not remove that duty.','The holder had been heard in writing and in person before the licence was withdrawn.']];
+var CCD=[
+ ['A State wanted to set a living wage above the federal level. The Federation said the Living Wage Act left no room for that, and the State said it did.','Under Article 28 the Federation may set minimum standards, and States may exceed them but not fall below. The Act is a floor, not a ceiling.','The Act went further than a floor and fixed a single rate, which belongs to the States’ reserved powers.'],
+ ['A State said the Federal Police Service Act reached into how its own police are run.','Article 30 leaves State police to the States within federal minimum standards. The provisions here only set minimum standards.','Several provisions told the State how to organise its own force, which Article 30 leaves to the State.'],
+ ['Members of the House who made up one third asked the Court to review the repeal of a protection in the Public Housing Act.','Article 5 bars the regression of rights already given. Repealing a protection without putting an equal one in its place is a regression.','An equal protection was kept in another part of the Act, so there was no regression.'],
+ ['Senators who made up one third asked the Court whether a criterion in the Boundary Commission Act for drawing electoral districts favoured one party.','Article 17 requires districts to be drawn without regard to partisan advantage. A criterion that predictably favours one party cannot stand.','The criterion applied equally to every party and rested on population and community lines, so it favoured none.'],
+ ['Members asked whether the registration rules in the Sectoral Lists Act could reduce the sectoral share of the House below twenty percent.','The Constitution fixes the sectoral seats at twenty percent. A rule that can reduce the share conflicts with that.','The rules were read as keeping the share at twenty percent in every case, so they were valid.'],
+ ['The Cabinet asked the Court whether the Grain Reserve Act could be used to take stock from private stores without compensation.','Expropriation needs prompt and fair compensation under Article 39. The Court read that duty into the Act.','The Act already provided for fair compensation, so no change was needed.'],
+ ['A State High Court asked whether a cap on cross-ownership in the Media Ownership Act was consistent with the freedom of the press.','A limit on the press must be no wider than needed. A less restrictive rule would do the same job.','The cap was narrow and aimed at a real risk, so it was proportionate.'],
+ ['The Control Commission asked the Court to approve classifying one of its findings. Article 26 allows this only with the Court’s approval and for no more than five years.','The Court weighed the harm of release against the public’s right to know and approved classification for a limited period.','No harm was shown that outweighed the public’s right to know, so the finding stays public.']];
+function caseOf(id){var m=/^([sc])(\d{4})(\d{2})(\d{2})-(\d+)$/.exec(id);if(!m)return null;var d=new Date(+m[2],+m[3]-1,+m[4]);var p=dayPlan(d);if(!p)return null;var c=(m[1]==='s'?p.sc:p.cc)[+m[5]];if(!c)return null;return c}
+function caseTime(c){var w=c.d.getDay(),k=c.kind;if(k===0)return w===4?570+c.ix*20:600+c.ix*90;if(w===5)return 840+c.ix*20;return c.ix===0?600:840}
+function caseDecided(c){var w=c.d.getDay();var isDec=(c.kind===0&&w===4)||(c.kind===1&&w===5);if(!isDec)return false;var t=caseTime(c);var dt=new Date(c.d.getFullYear(),c.d.getMonth(),c.d.getDate(),Math.floor(t/60),t%60);return dt<=NOW}
+function showCase(id){var box=document.getElementById('caseView');var c=caseOf(id);
+ if(!c){box.hidden=true;document.body.classList.remove('ov');return}
+ var k=c.kind,D=(k?CCD:SCD)[c.ti],bench=(k?CC:SC),r=RNG(dseed(c.d,500+c.ix+k*7)),dec=caseDecided(c);
+ var vp=c.vote.split('–'),maj=+vp[0],mi=+vp[1];var order=r.sh(bench.map(function(b){return b[0]}));
+ var pres=k?'Sabine Oyelaran-Voss, President of the Court':'Helene Varga-Montrose, Chief Justice';
+ var num=(k?'CC':'SC')+'/166/'+p2(c.d.getMonth()+1)+p2(c.d.getDate())+'-'+(c.ix+1);
+ var h='<div class="cv-head"><span class="mono">'+(k?'Constitutional Court':'Supreme Court')+' · '+num+'</span><button type="button" class="chip" id="cvClose">Close</button></div>';
+ h+='<h2>'+esc(c.t)+'</h2><p class="cv-sub mono">'+esc(c.art)+' · '+dshort(c.d)+' · '+hm(caseTime(c))+' · '+(dec?'Decided':(c.d>TODAYD||(c.d.getTime()===TODAYD.getTime())?'Listed':'Reserved'))+'</p>';
+ h+='<dl class="kv"><div><dt class="mono">Question</dt><dd>'+esc(c.q)+'</dd></div><div><dt class="mono">Background</dt><dd>'+esc(D[0])+'</dd></div>';
+ if(dec){var orders=c.allow?'The appeal is allowed.':'The appeal is dismissed.';if(k)orders=c.allow?'The challenge succeeds in the terms stated.':'The challenge fails in the terms stated.';
+  h+='<div><dt class="mono">Decision</dt><dd><b>'+esc(c.out)+'</b></dd></div><div><dt class="mono">Reasons</dt><dd>'+esc(c.allow?D[1]:D[2])+'</dd></div>';
+  h+='<div><dt class="mono">Vote</dt><dd>'+c.vote+(mi===0?' (unanimous)':'')+'</dd></div><div><dt class="mono">Presiding</dt><dd>'+pres+'</dd></div>';
+  h+='<div><dt class="mono">Opinion by</dt><dd>'+esc(order[0])+'</dd></div><div><dt class="mono">In the majority</dt><dd>'+esc(order.slice(0,maj).join(', '))+'</dd></div>';
+  if(mi)h+='<div><dt class="mono">Dissenting</dt><dd>'+esc(order.slice(maj,maj+mi).join(', '))+'</dd></div>';
+  h+='<div><dt class="mono">Orders</dt><dd>'+orders+(k?' Effect of any strike-down starts on the date of the ruling unless the Court says otherwise.':'')+'</dd></div>'}
+ else{h+='<div><dt class="mono">Status</dt><dd>'+(k?(c.d.getDay()===5?'Ruling due '+hm(caseTime(c))+' on '+dshort(c.d)+'.':'Heard on '+dshort(c.d)+'. The Constitutional Court gives rulings on Fyrdays.'):(c.d.getDay()===4?'Judgment due '+hm(caseTime(c))+' on '+dshort(c.d)+'.':'Heard on '+dshort(c.d)+'. Supreme Court judgments are given on Winsdays.'))+'</dd></div>'}
+ h+='</dl>';
+ box.innerHTML='<div class="cv-in" role="dialog" aria-modal="true" aria-label="Case details">'+h+'</div>';box.hidden=false;document.body.classList.add('ov');
+ var cl=document.getElementById('cvClose');cl.focus();cl.addEventListener('click',closeCase)}
+function closeCase(){if(location.hash.indexOf('#/case/')===0)history.pushState('',document.title,location.pathname+location.search+'#rulings');showCase('')}
+function route(){var m=/^#\/case\/(.+)$/.exec(location.hash);showCase(m?m[1]:'')}
+window.addEventListener('hashchange',route);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!document.getElementById('caseView').hidden)closeCase()});
+document.getElementById('caseView').addEventListener('click',function(e){if(e.target===this)closeCase()});
+route();
+})();
+
+</script>
+</body>
+</html>

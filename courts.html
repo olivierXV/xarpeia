@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The Courts of the Federation: the Supreme Court, the Constitutional Court, appellate and lower federal courts of the Federal Republic of Latrevia."><meta name="theme-color" content="#0B1B3A">
 <title>The Federal Courts</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap">
 <style>
 /* Layout: the Federal portal's system (navy masthead, flag band, gold hairlines) with a ceremonial opening:
    the Executive Palace mark beside the title, then a profile, a filterable Cabinet, a roll of predecessors.
@@ -397,6 +394,69 @@ footer .motto { margin-top: 14px; color: #CDAE69; font: italic 400 1rem/1.4 var(
 .cv-sub{color:var(--fg-2);margin-bottom:16px;font-size:.78rem}
 body.ov{overflow:hidden}
 
+/* ===== 90s layer: Federal (midnight blue and gold, flat bevels) ===== */
+:root{--bg:#0b1226;--bg-2:#101a38;--card:#1e2c52;--card-hi:#26376a;--line:#33477f;--fg:#e8ecf7;--fg-2:#b4bfde;--gold:#c9a93f;--gold-text:#e0c060;--link:#a9bdf2;--focus:#e0c060;--band-a:#0a1228;--band-b:#142040;--band-fg:#e8ecf7;--band-fg-2:#b4bfde;--on-gold:#0a1228;--mark:#e0c060;
+ --hi:#5b72c8;--sh:#050a1a;--pane:#142040;--btn:#c9a93f;--btnk:#0a1228;
+ --f-display:Georgia,"Times New Roman",serif;--f-body:Georgia,"Times New Roman",serif;--f-mono:"Courier New",Courier,monospace}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#aab5d3;--bg-2:#e9e6d8;--card:#d6d9e6;--card-hi:#e4e7f1;--line:#b8bfd8;--fg:#15203d;--fg-2:#38426a;--gold-text:#7a5a10;--link:#1f3e8a;--focus:#1f3e8a;--mark:#14224a;--hi:#fff;--sh:#2b3558;--pane:#f6f3e8;--btn:#d1b04a}}
+:root[data-theme="light"]{--bg:#aab5d3;--bg-2:#e9e6d8;--card:#d6d9e6;--card-hi:#e4e7f1;--line:#b8bfd8;--fg:#15203d;--fg-2:#38426a;--gold-text:#7a5a10;--link:#1f3e8a;--focus:#1f3e8a;--mark:#14224a;--hi:#fff;--sh:#2b3558;--pane:#f6f3e8;--btn:#d1b04a}
+body{font:16px/1.55 var(--f-body)}
+*{border-radius:0!important}
+.mono{font-family:var(--f-mono)}
+.flagband{grid-template-rows:repeat(3,2px)}
+.topbar{background:var(--band-a);border-bottom:1px solid var(--sh)}
+.masthead{background:linear-gradient(90deg,#e0c060 50%,#c9d4f2 50%) left bottom/100% 4px no-repeat,var(--band-b);border-bottom:2px solid var(--sh);padding-bottom:4px}
+body .brand b{font:700 clamp(17px,2.4vw,22px)/1.15 var(--f-display);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text)}
+body .brand span{letter-spacing:.18em}
+.nav{gap:4px}
+body .nav a{font:700 13px var(--f-display);font-variant:small-caps;letter-spacing:.08em;padding:5px 12px;background:var(--card);color:var(--fg);border:2px solid;border-color:var(--hi) var(--sh) var(--sh) var(--hi)}
+body .nav a:hover{background:var(--btn);color:var(--btnk);border-bottom-color:var(--sh)}
+.theme-btn{border:2px solid!important;border-color:var(--hi) var(--sh) var(--sh) var(--hi)!important;background:var(--card);color:var(--fg);font:700 13px var(--f-display);font-variant:small-caps}
+.theme-btn:active{border-color:var(--sh) var(--hi) var(--hi) var(--sh)!important}
+/* page body: sidebar left + pane */
+.body{display:flex;gap:14px;max-width:1160px;margin:0 auto;padding:18px 14px 30px;align-items:flex-start}
+.sd{flex:0 0 216px;display:flex;flex-direction:column;gap:12px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+.sd .box{background:var(--card);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);padding:10px 12px}
+.sd h4{margin:0 0 6px;font:700 11px var(--f-display);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text)}
+.sd a{display:block;padding:4px 4px;border-bottom:1px dotted var(--hi);font-size:14px;color:var(--fg);text-decoration:none}
+.sd a:hover,.sd a.cur{background:var(--btn);color:var(--btnk)}
+.pane{flex:1;min-width:0;background:var(--pane);color:var(--fg);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh)}
+.pane .wrap{max-width:none;padding-inline:26px}
+.pane .hero,.pane .direct{background:transparent}
+.pane .hero .wrap{padding-block:26px 22px}
+.pane section{padding-block:22px 26px;background:transparent!important;border-bottom:0;border-top:3px double var(--gold)}
+.pane section.alt{background:color-mix(in srgb,var(--card) 35%,transparent)!important}
+body .hero h1{font:400 clamp(28px,4.4vw,42px)/1.1 var(--f-display);letter-spacing:0;color:var(--gold-text);border-bottom:3px double var(--gold);padding-bottom:6px;max-width:none}
+html:not([data-theme="dark"]) body .hero h1{}
+.sec-head{gap:6px;margin-bottom:18px}
+.sec-head .mono{display:inline-block;justify-self:start;background:var(--gold);color:var(--on-gold);padding:2px 10px;font:700 11px var(--f-display);letter-spacing:.2em;text-transform:uppercase}
+body .sec-head h2{font:400 clamp(22px,3vw,30px)/1.15 var(--f-display);color:var(--fg)}
+.eyebrow{color:var(--gold-text)}
+.btn,.search button,.chip[aria-pressed="true"]{background:var(--btn);color:var(--btnk);border:2px solid;border-color:#fff8 var(--sh) var(--sh) #fff8;font:700 13px var(--f-display);font-variant:small-caps}
+.chip{background:var(--card);color:var(--fg);border:2px solid;border-color:var(--hi) var(--sh) var(--sh) var(--hi);font-family:var(--f-display)}
+.chip:hover{background:var(--btn);color:var(--btnk)}
+.search input{background:var(--pane);color:var(--fg);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh)}
+.hero-emblem,.hero-art svg{filter:none}
+footer{background:var(--band-b)!important;border-top:3px double var(--gold)}
+@media (max-width:860px){.body{flex-direction:column;padding:10px 8px 20px}.sd{display:none}.pane .wrap{padding-inline:16px}}
+
+.go{color:var(--link)!important}
+html:not([data-theme="light"]) .go{color:var(--gold-text)!important}
+@media (prefers-color-scheme:light){html:not([data-theme="dark"]) .go{color:var(--link)!important}}
+
+/* auto: card-like boxes -> inset bevels */
+body .glance,
+body .hemi-wrap,
+body .min,
+body .oathbox,
+body .off,
+body .pm,
+body .s-detail,
+body .status,
+body .stile,
+body .stt,
+body .svc,
+body .tally div{border:2px solid!important;border-color:var(--sh) var(--hi) var(--hi) var(--sh)!important;background:var(--card)!important;box-shadow:none!important}
 </style>
 </head>
 <body>
@@ -454,7 +514,7 @@ body.ov{overflow:hidden}
   </div>
 </header>
 
-<main id="main">
+<div class="body"><aside class="sd" id="sd" aria-label="On this page"></aside><div class="pane"><main id="main">
 <a id="top"></a>
 <div class="hero">
   <div class="wrap">
@@ -682,7 +742,7 @@ body.ov{overflow:hidden}
     </ul>
   </div>
 </section>
-</main>
+</main></div></div>
 <div id="caseView" class="cv" hidden></div>
 
 <footer>
@@ -965,5 +1025,9 @@ route();
 })();
 
 </script>
+<script>(function(){var sd=document.getElementById('sd');if(!sd)return;var h='<div class="box"><h4>On this page</h4>';var m=document.getElementById('main');
+var top=m.querySelector('[id=top]');h+='<a href="#main">Top</a>';
+[].forEach.call(m.querySelectorAll('section[id]'),function(s){var t=s.querySelector('.sec-head h2,h2');if(t)h+='<a href="#'+s.id+'">'+t.textContent.replace(/\s+/g,' ').trim()+'</a>'});
+h+='</div><div class="box"><h4>The Federation</h4><a href="latrevia.html">Federal Republic</a><a href="executive-palace.html">Office of the President</a><a href="assembly.html">Federal Assembly</a><a href="courts.html" class="cur">Federal Courts</a><a href="commonwealth.html">Commonwealth</a></div>';sd.innerHTML=h})();</script>
 </body>
 </html>

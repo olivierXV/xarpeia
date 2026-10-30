@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#122659">
 <title>The Commonwealth Congress</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap">
 <style>
 
 :root {
@@ -236,6 +233,73 @@ footer .marks img.emb { width: 60px; height: 60px; }
   .nav a { white-space: nowrap; padding: 10px 10px; }
   .theme-btn, .langbtn { padding: 8px 10px; }
 }
+/* ===== 90s layer: Commonwealth (teal midnight, flat bevels, sidebar right) ===== */
+:root{--page:#9bbcc0;--bg:#f2f6f4;--paper:#cddcdc;--ink:#0f2429;--ink2:#33545a;--cobalt:#7a5f12;--deep:#5a4508;--link:#145766;--sky:#19B5F5;--btn:#d1b658;--btn-deep:#e0c970;--on-cobalt:#071a1d;--rule:#8fb0b0;--soft:#dfe9e8;--focus:#145766;
+ --card:var(--paper);--line:var(--rule);--fg:var(--ink);--fg-2:var(--ink2);--gold:#b0912c;--gold-text:#7a5f12;
+ --hi:#fff;--sh:#1d3b40;--btnk:#071a1d;--hero:#0f2e35;--hero-2:#17333a;--hero-fg:#e6efef;--hero-fg2:#b9ccd0;--gold-soft:#e0c060;
+ --f-display:Georgia,"Times New Roman",serif;--f-body:Georgia,"Times New Roman",serif;--f-mono:"Courier New",Courier,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--page:#08181b;--bg:#0f2429;--paper:#17333a;--ink:#e6efef;--ink2:#a9bfc3;--cobalt:#dcbc62;--deep:#e8cf86;--link:#9fd0d6;--btn:#cdb25a;--btn-deep:#e0c970;--rule:#2f5d68;--soft:#1f4048;--focus:#dcbc62;--gold:#dcbc62;--gold-text:#dcbc62;--hi:#4a8592;--sh:#04100f}}
+:root[data-theme="dark"]{--page:#08181b;--bg:#0f2429;--paper:#17333a;--ink:#e6efef;--ink2:#a9bfc3;--cobalt:#dcbc62;--deep:#e8cf86;--link:#9fd0d6;--btn:#cdb25a;--btn-deep:#e0c970;--rule:#2f5d68;--soft:#1f4048;--focus:#dcbc62;--gold:#dcbc62;--gold-text:#dcbc62;--hi:#4a8592;--sh:#04100f}
+html[data-theme="light"]{--page:#9bbcc0}
+body{background:var(--page);font:16px/1.55 var(--f-body)}
+*{border-radius:0!important}
+img.heroemb,.brand img{border-radius:50%!important}
+.mono,.mono *{font-family:var(--f-mono)}
+/* masthead */
+.mast{position:static!important;background:#0f2e35;color:#e6efef;border-bottom:2px solid var(--sh)}
+.mast .tri{height:5px;background:linear-gradient(90deg,#dcbc62 50%,#b9c9cc 50%)}
+.mast .brand,.mast .brand small,.mast .brand b{color:#e6efef}
+.mast .brand b{font:700 clamp(15px,2.2vw,20px)/1.15 var(--f-display);letter-spacing:.1em;text-transform:uppercase;color:#e0c060}
+.mast .brand small{letter-spacing:.14em;text-transform:uppercase;font-size:11px;opacity:.85}
+.mast-in{padding-block:12px}
+.mnav{gap:4px!important}
+body .mnav a{font:700 13px var(--f-display);font-variant:small-caps;letter-spacing:.08em;padding:5px 12px!important;background:#17333a;color:#e6efef;border:2px solid;border-color:#4a8592 #04100f #04100f #4a8592;text-decoration:none}
+body .mnav a:hover{background:#cdb25a;color:#071a1d}
+.mnav a.out{margin-left:0!important;color:#e6efef}
+.tbtn{background:#17333a;color:#e6efef;border:2px solid!important;border-color:#4a8592 #04100f #04100f #4a8592!important;font:700 13px var(--f-display);font-variant:small-caps;padding:4px 12px}
+.tbtn:hover{background:#cdb25a;color:#071a1d}
+/* layout: sidebar right + pane */
+.body{display:flex;flex-direction:row-reverse;gap:14px;max-width:1160px;margin:0 auto;padding:18px 14px 30px;align-items:flex-start}
+.sd{flex:0 0 216px;display:flex;flex-direction:column;gap:12px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+.sd .box{background:var(--paper);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);padding:10px 12px}
+.sd h4{margin:0 0 6px;font:700 11px var(--f-display);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text)}
+.sd a{display:block;padding:4px;border-bottom:1px dotted var(--hi);font-size:14px;color:var(--ink);text-decoration:none}
+.sd a:hover,.sd a.cur{background:var(--btn);color:var(--btnk)}
+.pane{flex:1;min-width:0;background:var(--bg);color:var(--ink);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh)}
+.pane .wrap{max-width:none;padding-inline:26px}
+.pane .hero{padding-top:20px;background:transparent}
+.pane .grid3{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+.pane .heroside{display:flex;align-items:center;gap:16px;padding:0}
+.pane .heroemb{width:84px;height:84px;box-shadow:none;border:2px solid var(--sh)}
+.pane .heroside .mono{margin:0!important}
+.pane .herobody,.pane .secbody{border-left:0!important;padding-left:0!important}
+.pane .herobody{padding-bottom:20px}
+body .pane h1{font:400 clamp(28px,4.4vw,42px)/1.1 var(--f-display);letter-spacing:0;color:var(--gold-text);border-bottom:3px double var(--gold);padding-bottom:6px}
+.pane h1 em{color:var(--ink);font-style:italic}
+.pane section.sec{padding-bottom:22px;border-top:3px double var(--gold);background:transparent!important}
+.pane .sec .grid3{padding-top:20px!important}
+.pane .sechead{position:static!important}
+.sechead .kicker{display:inline-block;background:var(--gold);color:#071a1d;padding:2px 10px;font:700 11px var(--f-display)!important;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px!important}
+body .pane h2{font:400 clamp(22px,3vw,30px)/1.15 var(--f-display);color:var(--ink);letter-spacing:0}
+.pane .lead2{max-width:70ch}
+.facts b,.eyebrow,.tag,.colh,.knot{color:var(--gold-text)!important}
+.btn,.vow{background:var(--btn)!important;color:var(--btnk)!important;border:2px solid!important;border-color:#fff8 var(--sh) var(--sh) #fff8!important;font:700 13px var(--f-display);font-variant:small-caps}
+.btn.ghost{background:var(--paper)!important;color:var(--ink)!important;border-color:var(--hi) var(--sh) var(--sh) var(--hi)!important}
+.btn:hover{filter:brightness(1.08)}
+.vow{padding:22px 26px}
+.note{background:var(--soft);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);border-left-width:2px}
+.heroflag svg,.bigflag svg{box-shadow:none}
+.foot{background:#0f2e35!important;color:#e6efef;border-top:3px double #dcbc62}
+.foot p,.foot nav .mono,.foot a{color:#d4e2e4}
+.foot .fbrand{color:#e0c060}
+html:not([data-theme="dark"]) .skip{}
+@media (max-width:860px){.body{flex-direction:column;padding:10px 8px 20px}.sd{display:none}.pane .wrap{padding-inline:16px}.mnav{overflow-x:auto;flex-wrap:nowrap}}
+
+/* auto: card-like boxes -> inset bevels */
+body .gcard,
+body .pm2,
+body .rule,
+body .sen-del{border:2px solid!important;border-color:var(--sh) var(--hi) var(--hi) var(--sh)!important;background:var(--paper)!important;box-shadow:none!important}
 </style>
 </head>
 <body>
@@ -331,7 +395,7 @@ footer .marks img.emb { width: 60px; height: 60px; }
   </div>
 </header>
 
-<main id="main">
+<div class="body"><aside class="sd" id="sd" aria-label="On this page"></aside><div class="pane"><main id="main">
 <a id="top"></a>
 <section class="hero">
   <div class="wrap grid3">
@@ -582,7 +646,7 @@ footer .marks img.emb { width: 60px; height: 60px; }
       <article class="svc"><h3><span lang="en">Read the record</span><span lang="fr">Lire le compte rendu</span></h3><p><span lang="en">Legislation is published in English and French, and the Grand Library keeps the record of the Congress.</span><span lang="fr">La législation est publiée en anglais et en français, et la Grande Bibliothèque conserve les archives du Congrès.</span></p></article>
     </div>
     <p class="addr"><span lang="en"><b>The Commonwealth Congress</b>, Dome of the Commonwealth, Latreionople, Commonwealth of Latrevia and Solaria.</span><span lang="fr"><b>Le Congrès du Commonwealth</b>, Dôme du Commonwealth, Latreionople, Commonwealth de Latrévie et de Solarie.</span></p></div></div></section>
-</main>
+</main></div></div>
 
 <footer class="foot">
   <div class="tri"></div>
@@ -773,5 +837,8 @@ footer .marks img.emb { width: 60px; height: 60px; }
 })();
 </script>
 
+<script>(function(){var sd=document.getElementById('sd');if(!sd)return;var h='<div class="box"><h4><span lang="en">On this page</span><span lang="fr">Sur cette page</span></h4><a href="#main"><span lang="en">Top</span><span lang="fr">Haut</span></a>';var m=document.getElementById('main');
+[].forEach.call(m.querySelectorAll('section[id]'),function(s){var t=s.querySelector('.sechead h2,h2');if(t)h+='<a href="#'+s.id+'">'+t.innerHTML.replace(/<br\s*\/?>/g,' ')+'</a>'});
+h+='</div><div class="box"><h4><span lang="en">The Commonwealth</span><span lang="fr">Le Commonwealth</span></h4><a href="commonwealth.html"><span lang="en">Commonwealth</span><span lang="fr">Commonwealth</span></a><a href="commonwealth-presidency.html"><span lang="en">Presidency</span><span lang="fr">Présidence</span></a><a href="congress.html" class="cur"><span lang="en">Congress</span><span lang="fr">Congrès</span></a><a href="commonwealth-courts.html"><span lang="en">Courts</span><span lang="fr">Cours</span></a><a href="latrevia.html"><span lang="en">Federal portal</span><span lang="fr">Portail fédéral</span></a></div>';sd.innerHTML=h})();</script>
 </body>
 </html>
