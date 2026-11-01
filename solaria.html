@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" data-site="solaria">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kingdom of Solaria · 3615 SOLARIE</title>
+<meta name="description" content="Official portal of the Kingdom of Solaria (3615 SOLARIE). The Crown, Parliament, the Government and the nine islands. Bilingual, French and English.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a1478'/%3E%3Cpath d='M16 3l10 13-10 13L6 16z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--page:#b7c3e6;--bg:#f5f7fd;--paper:#dde4f6;--ink:#0a1240;--ink2:#38447c;--acc:#14229e;--acc2:#18215a;--link:#14229e;--rule:#8c9bd0;--soft:#e8ecf9;--focus:#14229e;
+ --hi:#ffffff;--sh:#2a3470;--btn:#f2cf3a;--btnk:#0a1240;--cyan:#0a7fa0;--yel:#e8b800;
+ --cy:#0a7fa0;--rd:#c0272d;--gn:#1f8a3c;--mg:#a8267f;--yl:#a88a00;--dim:#6a7096;
+ --f-display:Georgia,"Times New Roman",serif;--f-body:Georgia,"Times New Roman",serif;--f-mono:"Courier New",Courier,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--page:#090c1c;--bg:#111733;--paper:#192045;--ink:#e3e7f4;--ink2:#a4aed0;--acc:#e6cf7a;--acc2:#e6cf7a;--link:#93c9d9;--rule:#2d376a;--soft:#1e2752;--focus:#e6cf7a;--hi:#3f4a82;--sh:#04061a;--btn:#d8c068;--btnk:#0b1028;--cyan:#8ac3d2;--yel:#e6cf7a;--cy:#82c4d6;--rd:#e39a9a;--gn:#8fd3a0;--mg:#d9a0cc;--yl:#e6cf7a;--dim:#9aa3c4;color-scheme:dark}}
+:root[data-theme="dark"]{--page:#090c1c;--bg:#111733;--paper:#192045;--ink:#e3e7f4;--ink2:#a4aed0;--acc:#e6cf7a;--acc2:#e6cf7a;--link:#93c9d9;--rule:#2d376a;--soft:#1e2752;--focus:#e6cf7a;--hi:#3f4a82;--sh:#04061a;--btn:#d8c068;--btnk:#0b1028;--cyan:#8ac3d2;--yel:#e6cf7a;--cy:#82c4d6;--rd:#e39a9a;--gn:#8fd3a0;--mg:#d9a0cc;--yl:#e6cf7a;--dim:#9aa3c4;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box;border-radius:0}
+html{scroll-behavior:smooth;scroll-padding-top:12px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--page);color:var(--ink);font:16px/1.55 var(--f-body);-webkit-text-size-adjust:100%}
+a{color:var(--link);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--btn);color:var(--btnk);padding:.6rem 1rem;z-index:50}.skip:focus{left:0}
+svg{max-width:100%}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.y{color:var(--acc);font-weight:700}.dim{color:var(--ink2)}
+/* strip + mosaic */
+.strip{background:#070a1e;color:#b9c2e2;font:12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase}
+.strip .in{max-width:1160px;margin:0 auto;padding:5px 14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.strip b{color:#e6cf7a}
+.mos{height:8px;background:
+ linear-gradient(90deg,#8ac3d2 0 12px,transparent 12px 16px,#e6cf7a 16px 28px,transparent 28px 32px,#fff 32px 44px,transparent 44px 48px) 0 0/48px 4px repeat-x,
+ linear-gradient(90deg,transparent 0 6px,#8ac3d2 6px 18px,transparent 18px 22px,#e6cf7a 22px 34px,transparent 34px 38px,#fff 38px 48px) 0 4px/48px 4px repeat-x}
+/* masthead */
+.mast{background:#18215a;color:#e3e7f4;border-bottom:2px solid #04061a}
+.mast-in{max-width:1160px;margin:0 auto;padding:12px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#e3e7f4;margin-right:auto;min-width:0}
+.brand svg{width:44px;height:44px;flex:none}
+.brand b{display:block;font:700 clamp(15px,2.2vw,20px)/1.15 var(--f-display);letter-spacing:.1em;text-transform:uppercase;color:#e6cf7a}
+.brand small{display:block;letter-spacing:.14em;text-transform:uppercase;font-size:11px;opacity:.88}
+.tools{display:flex;gap:6px}
+.tbtn,.mnav a{font:700 13px var(--f-display);font-variant:small-caps;letter-spacing:.08em;background:#1d2760;color:#e3e7f4;border:2px solid;border-color:#4a5594 #04061a #04061a #4a5594;padding:4px 12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:7px;line-height:1.3}
+.tbtn:hover,.mnav a:hover{background:#d8c068;color:#0b1028}
+.mnav{display:flex;gap:4px;flex-wrap:wrap;width:100%}
+.mnav a.cur{background:#d8c068;color:#0b1028;border-color:#04061a #4a5594 #4a5594 #04061a}
+.mnav .n{background:#8ac3d2;color:#0b1028;font:700 12px var(--f-mono);padding:0 5px;line-height:1.35}
+.mnav a.cur .n,.mnav a:hover .n{background:#18215a;color:#e6cf7a}
+.mnav a.out{margin-left:auto}
+/* layout */
+.body{display:flex;flex-direction:row-reverse;gap:14px;max-width:1160px;margin:0 auto;padding:18px 14px 30px;align-items:flex-start}
+.sd{flex:0 0 220px;display:flex;flex-direction:column;gap:12px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+.sd .box{background:var(--paper);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);padding:10px 12px}
+.sd h4{margin:0 0 6px;font:700 11px var(--f-display);letter-spacing:.22em;text-transform:uppercase;color:var(--acc2)}
+.sd a{display:block;padding:4px;border-bottom:1px dotted var(--hi);font-size:14px;color:var(--ink);text-decoration:none}
+.sd a:hover,.sd a.cur{background:var(--btn);color:var(--btnk)}
+.sd a:last-child{border-bottom:0}
+.pane{flex:1;min-width:0;background:var(--bg);color:var(--ink);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh)}
+.pg{padding:20px 26px 26px}
+h1{font:400 clamp(28px,4.4vw,42px)/1.1 var(--f-display);color:var(--acc2);border-bottom:3px double var(--acc2);padding-bottom:6px;margin:6px 0 16px;text-wrap:balance}
+.eyebrow{color:var(--acc2);margin:0}
+.lead{font-size:1.1rem;max-width:42em;color:var(--ink2);margin:0 0 18px}
+h2.sub{font:700 clamp(18px,2.4vw,22px)/1.2 var(--f-display);color:var(--ink);margin:26px 0 8px;padding:3px 0 3px 10px;border-left:6px solid var(--btn);border-bottom:1px solid var(--rule)}
+p{margin:0 0 12px;max-width:46em}
+.l{margin:0 0 12px;padding-left:1.2rem;max-width:46em}.l li{margin-bottom:5px}
+.kv{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:0;margin:0 0 14px;max-width:48em;border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);background:var(--soft)}
+.kv dt{font:700 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);padding:8px 10px;border-bottom:1px dotted var(--rule)}
+.kv dd{margin:0;padding:8px 10px;border-bottom:1px dotted var(--rule)}
+.kv dt:last-of-type,.kv dd:last-of-type{border-bottom:0}
+.fig{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;margin:0 0 16px}.fig figure{margin:0}.fig svg{display:block;height:auto}.fig figcaption{font:12px var(--f-mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink2);margin-top:6px}
+.t{width:100%;border-collapse:collapse;margin:0 0 14px;background:var(--soft);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh)}
+.t th{font:700 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;text-align:left;color:#e3e7f4;background:#18215a;padding:6px 10px}
+.t td{padding:7px 10px;vertical-align:top;border-top:1px dotted var(--rule)}
+.t .num{text-align:right;font-family:var(--f-mono);white-space:nowrap}
+.t td.y{white-space:nowrap}
+.bars{display:grid;gap:6px;margin:0 0 10px;max-width:46em}
+.bar{display:grid;grid-template-columns:minmax(0,12rem) minmax(0,1fr) 2.6rem;gap:10px;align-items:center}
+.bar b{font-weight:400;display:flex;flex-direction:column;line-height:1.2}.bar b small{font:11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+.bar .f{display:block;height:16px;background:var(--c);border:2px solid;border-color:var(--hi) var(--sh) var(--sh) var(--hi);min-width:6px}
+.bar em{font:700 14px var(--f-mono);font-style:normal;text-align:right}
+.maj{background:var(--soft);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);padding:10px 14px}
+.leg{display:flex;flex-wrap:wrap;gap:6px 16px;margin:10px 0;font-size:14px}.leg i,.sen i{display:inline-block;width:11px;height:11px;background:var(--c);margin-right:6px;border:1px solid var(--sh)}
+.sen{list-style:none;margin:0 0 12px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:0 18px}
+.sen li{display:flex;align-items:center;padding:4px 0;border-bottom:1px dotted var(--rule);font-size:15px}
+.sen small{margin-left:auto;font:12px var(--f-mono);color:var(--ink2);padding-left:8px}
+.cred{font-size:14px;color:var(--ink2);margin-top:18px}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;align-items:center;margin-bottom:6px}
+.hero .side{display:flex;flex-direction:column;align-items:center;gap:14px;padding:16px;background:var(--soft);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh)}
+.hero .side svg{display:block;height:auto}
+.motto{margin:0;font:italic 1.05rem var(--f-display);text-align:center;color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px}
+.btn{display:inline-block;text-decoration:none;font:700 14px var(--f-display);font-variant:small-caps;letter-spacing:.06em;background:var(--btn);color:var(--btnk);border:2px solid;border-color:#fff8 var(--sh) var(--sh) #fff8;padding:7px 16px;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:var(--paper);color:var(--ink);border-color:var(--hi) var(--sh) var(--sh) var(--hi)}
+.facts{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);background:var(--paper)}
+.facts li{padding:12px 14px;border-right:1px dotted var(--rule);display:flex;flex-direction:column}.facts li:last-child{border-right:0}
+.facts b{font:400 2.1rem/1 var(--f-display);color:var(--acc2)}.facts span{font-size:.88rem;color:var(--ink2)}
+.sech{display:inline-block;background:var(--btn);color:var(--btnk);padding:2px 10px;font:700 11px var(--f-display);letter-spacing:.2em;text-transform:uppercase;margin:26px 0 8px}
+/* sommaire (minitel menu) */
+.menu{list-style:none;margin:0 0 6px;padding:0;border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);background:var(--paper)}
+.menu a{display:flex;align-items:baseline;gap:10px;padding:8px 12px;text-decoration:none;color:var(--ink);border-bottom:1px dotted var(--rule)}
+.menu li:last-child a{border-bottom:0}
+.menu .n{background:var(--acc2);color:var(--bg);font:700 15px var(--f-mono);padding:0 8px;flex:none}
+html[data-theme="dark"] .menu .n{color:#0b1028}
+.menu .nm{font-weight:700;font-variant:small-caps;letter-spacing:.05em;font-size:17px;white-space:nowrap}
+.menu .dots{flex:1;border-bottom:2px dotted var(--rule);min-width:12px;transform:translateY(-4px)}
+.menu .d{color:var(--ink2);font-size:14px;text-align:right}
+.menu a:hover{background:var(--btn);color:var(--btnk)}.menu a:hover .d{color:var(--btnk)}
+/* prompt + pager */
+.pager{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 12px}
+.prompt{margin:10px 0 0;padding:10px 14px;background:#18215a;color:#e3e7f4;border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-family:var(--f-mono)}
+.prompt label{color:#e6cf7a;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
+.prompt input{width:3.2rem;font:700 18px var(--f-mono);text-align:center;background:#04061a;color:#8ac3d2;border:2px solid #4a5594;padding:2px 4px;caret-color:#8ac3d2}
+.prompt .go{font:700 13px var(--f-mono);letter-spacing:.1em;background:#e3e7f4;color:#18215a;border:0;padding:5px 10px;cursor:pointer}
+.prompt .go:hover{background:#e6cf7a}
+.prompt .hint{font-size:12px;opacity:.85;flex:1 1 14rem}
+.msg{min-height:1.4em;color:var(--rd);font:700 13px var(--f-mono);margin-top:8px}
+.cur-blink{display:inline-block;width:.6em;height:1em;background:#8ac3d2;vertical-align:-2px;animation:bl 1.1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.foot{background:#18215a;color:#c3cbe6;border-top:3px double #e6cf7a;padding:16px 14px 22px;font-size:14px}
+.foot .in{max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.foot a{color:#93c9d9}.foot b{color:#e6cf7a;font:700 13px var(--f-display);letter-spacing:.12em;text-transform:uppercase}
+@media (max-width:860px){.body{flex-direction:column;padding:10px 8px 20px}.sd{display:none}.pg{padding:16px 14px 20px}.mnav{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.mnav a{white-space:nowrap}.mnav a.out{margin-left:0}.hero{grid-template-columns:minmax(0,1fr)}.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.facts li:nth-child(2){border-right:0}.facts li:nth-child(-n+2){border-bottom:1px dotted var(--rule)}}
+@media (max-width:560px){.kv{grid-template-columns:minmax(0,1fr)}.kv dt{border-bottom:0;padding-bottom:0}.menu .d{display:none}.menu .dots{display:none}.bar{grid-template-columns:minmax(0,7rem) minmax(0,1fr) 2.2rem;gap:6px}.brand small{display:none}.menu .nm{white-space:normal}.strip .in span:last-child{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" id="skip">Skip to content</a>
+<div class="strip"><div class="in"><span id="stripL"></span><span id="stripR"></span></div></div>
+<div class="mos" aria-hidden="true"></div>
+<header class="mast"><div class="mast-in">
+ <a class="brand" href="#/"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#18215a" stroke="#fff" stroke-width="3"/><path d="M32 10l16 22-16 22-16-22z" fill="#fff"/></svg><span><b id="brT"></b><small id="brS"></small></span></a>
+ <div class="tools"><button class="tbtn" id="langBtn" type="button"></button><button class="tbtn" id="themeBtn" type="button"></button></div>
+ <nav class="mnav" id="mnav" aria-label="Sections"></nav>
+</div></header>
+<div class="body">
+ <aside class="sd" id="sd"></aside>
+ <div class="pane"><main id="main" class="pg" tabindex="-1" aria-live="polite"></main></div>
+</div>
+<footer class="foot"><div class="in"><span><b>3615 SOLARIE</b> · <span id="fT"></span></span><span id="fN"></span></div></footer>
+<script>
+var SENATORS=[["Mikhail Davidovich", "Centre Union", "I"], ["Ark Adrien", "Centre Union", "II"], ["Geneviève Saint-Aubin", "Centre Union", "III"], ["Philippe Beaumarchais", "Centre Union", "I"], ["Aurore Delacourt", "Centre Union", "II"], ["Théophile Lefèvre", "Centre Union", "III"], ["Solène Marchetti", "Centre Union", "I"], ["Hugues de Montclair", "Centre Union", "II"], ["Isabelle Rochefort", "Centre Union", "III"], ["Octave Valmont", "Centre Union", "I"], ["Margaux Trévillon", "Centre Union", "II"], ["Lucien Castellane", "Centre Union", "III"], ["Delphine Aubertin", "Centre Union", "I"], ["Étienne Montrésor", "Centre Union", "II"], ["Séraphine Lacroix", "Centre Union", "III"], ["Raoul Fontvieille", "Centre Union", "I"], ["Colette Dubreuil", "Progressive Alliance", "II"], ["Armand Vaudreuil", "Progressive Alliance", "III"], ["Ninon Belcastel", "Progressive Alliance", "I"], ["Jérôme Pelletier", "Progressive Alliance", "II"], ["Anaïs Beauregard", "Progressive Alliance", "III"], ["Gaston Lemoyne", "Progressive Alliance", "I"], ["Mireille Cassagne", "Progressive Alliance", "II"], ["Valentin Roquefeuil", "Progressive Alliance", "III"], ["Odette Marcillac", "Progressive Alliance", "I"], ["Marcel Barracuda", "Commonwealth Left", "II"], ["Cyrille Tessier", "Commonwealth Left", "III"], ["Bénédicte Laroque", "Commonwealth Left", "I"], ["Florian Chantelouve", "Commonwealth Left", "II"], ["Adèle Courtenay", "Commonwealth Left", "III"], ["Basile Montcalm", "Commonwealth Left", "I"], ["Yvonne Grandchamp", "Commonwealth Left", "II"], ["Léopold Bastide", "League of Regions", "III"], ["Clémentine Aragon", "League of Regions", "I"], ["Maxime Villeneuve", "League of Regions", "II"], ["Sylvie Haute-Rive", "League of Regions", "III"], ["Alphonse Verdier", "League of Regions", "I"], ["Josette Carmaux", "League of Regions", "II"], ["Aurélien Duvernay", "Conservative Union", "III"], ["Bertrand de Vaucluse", "Conservative Union", "I"], ["Anselme Rivière", "Conservative Union", "II"], ["Pascaline Duclos", "Conservative Union", "III"], ["Thibault Maupassant", "Conservative Union", "I"], ["Rosalie Deschamps", "Conservative Union", "II"], ["Ignace Boisvert", "Conservative Union", "III"], ["Nadège Lavigne", "Conservative Union", "I"], ["Célestin Orsini", "Conservative Union", "II"], ["Marthe Lecoq", "Conservative Union", "III"], ["Fabrien Soulier", "Conservative Union", "I"], ["Léonie Tavernier", "Non-attached", "II"]];
+var LANG='en';try{var sl=localStorage.getItem('solaria-lang');if(sl==='fr'||sl==='en')LANG=sl;else if((navigator.language||'').slice(0,2)==='fr')LANG='fr'}catch(e){}
+function t(fr,en){return LANG==='fr'?fr:en}
+/* in-world clock: AAX = year - 1860 */
+var MO=['Ixarius','Savrius','Caspius','Helius','Nerius','Kiomus','Epta','Exsilius','Ennia','Deka','Endeka','Dodeka'],DY=['Sunday','Monday','Stasday','Wawsday','Winsday','Fyrday','Erday'];
+function now(){var q=location.search.match(/now=(\d{12})/);if(q){var s=q[1];return new Date(+s.slice(0,4),+s.slice(4,6)-1,+s.slice(6,8),+s.slice(8,10),+s.slice(10,12))}return new Date()}
+function pad(n){return n<10?'0'+n:n}
+function clock(){var d=now();return DY[d.getDay()].slice(0,3).toUpperCase()+' '+d.getDate()+' '+MO[d.getMonth()].slice(0,3).toUpperCase()+' '+(d.getFullYear()-1860)+' · '+pad(d.getHours())+':'+pad(d.getMinutes())}
+/* figures */
+function flag(w){return '<svg viewBox="0 0 150 100" width="'+w+'" role="img" aria-label="'+t('Drapeau du Royaume de Solarie','Flag of the Kingdom of Solaria')+'"><rect width="150" height="100" fill="#18215a" stroke="#fff" stroke-width="2"/><path d="M75 14l30 36-30 36-30-36z" fill="#fff"/></svg>'}
+function arms(w){return '<svg viewBox="0 0 100 120" width="'+w+'" role="img" aria-label="'+t('Armes du Royaume','Arms of the Kingdom')+'"><path d="M8 8h84v56c0 28-26 44-42 52C34 108 8 92 8 64z" fill="#18215a" stroke="#fff" stroke-width="3"/><path d="M50 22l22 28-22 28-22-28z" fill="#fff"/></svg>'}
+function logo(w){return '<svg viewBox="0 0 120 120" width="'+w+'" aria-hidden="true"><rect x="2" y="2" width="116" height="116" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="8 4"/><path d="M60 14l28 46-28 46-28-46z" fill="currentColor"/></svg>'}
+/* pages */
+var GROUPS=[['Parti de la Concorde','Union du Centre','Centre Union','var(--cy)',62],['Travaillistes','Alliance progressiste','Progressive Alliance','var(--gn)',37],['Union Royale','Union conservatrice','Conservative Union','var(--rd)',30],['Parti Républicain','Gauche Commune','Commonwealth Left','var(--mg)',27],['Front des Îles','Ligue des Régions','League of Regions','var(--yl)',24]];
+var TERR=[
+ ['Solaria','Solaria',52,null,'Le cœur historique de la Couronne : îles mixtes de forêt et de prairie, siège du Parlement et de la Couronne.','The historic heart of the Crown: mixed forest and grass islands, and the seat of Parliament and the Crown.'],
+ ['Lesser Solaria','Lesser Solaria',22,null,'L’île la plus septentrionale de l’archipel.','The northernmost island of the archipelago.'],
+ ['Selena','Selena',12,null,'À l’est de Lesser Solaria; petite et proche du continent.','East of Lesser Solaria; small and close to the mainland.'],
+ ['Nord Cassane','Nord Cassane',14,null,'Chaîne occidentale de petites îles; collines et savane de Cassane.','The western chain of small islands; the Cassane Hills and savannah.'],
+ ['Sud Cassane','Sud Cassane',14,null,'Prolonge Nord Cassane vers le sud.','Continues Nord Cassane to the south.'],
+ ['Mycélium','Mycélium',6,null,'L’île aux champignons et son glacier, isolée au sud de Selena. La plus petite voix, au Sénat des Îles comme ailleurs égale aux autres.','The mushroom island and its glacier, isolated south of Selena. The smallest territory, and still equal to the rest in the Sénat des Îles.'],
+ ['Neu Solaria','Neu Solaria',24,null,'Près du continent, avec son port et ses icebergs. Vendue par la République latrevienne : double code coutumier.','Close to the mainland, with its port and its icebergs. Sold by the Latrevian Republic, and under a dual-code framework.'],
+ ['Verrecôte','Verrecôte',18,null,'Pointe sud-ouest de l’archipel, avec son château et ses collines. Vendue par la République latrevienne : double code coutumier.','The south-western tip of the chain, with its castle and hills. Sold by the Latrevian Republic, and under a dual-code framework.'],
+ ['Clement','Clement',18,null,'Ancrée à l’extrémité sud-ouest avec Verrecôte, au bord de la mer de Clement. Vendue par la République latrevienne : double code coutumier.','Anchors the south-west with Verrecôte, on the Sea of Clement. Sold by the Latrevian Republic, and under a dual-code framework.']
+];
+var P=[
+{n:1,fr:'Le Royaume',en:'The Kingdom',dfr:'Territoires, langue, symboles',den:'Territories, language, symbols',f:function(){return ''+
+ '<div class="fig"><figure>'+flag(180)+'<figcaption>'+t('Le drapeau','The flag')+'</figcaption></figure><figure>'+arms(90)+'<figcaption>'+t('Les armes','The arms')+'</figcaption></figure></div>'+
+ '<p>'+t('Solarie est une <span class="y">monarchie constitutionnelle</span> et une entité constitutive du Commonwealth de Latrevia et de Solarie, égale en statut et en dignité à la République fédérale de Latrevia. La souveraineté appartient au peuple de Solarie. Elle s’exerce par le Parlement, le Gouvernement et les tribunaux; la Couronne ne détient que les pouvoirs que la Constitution lui nomme.','Solaria is a <span class="y">constitutional monarchy</span> and a constituent entity of the Commonwealth of Latrevia and Solaria, equal in status and dignity to the Federal Republic of Latrevia. Sovereignty belongs to the people of Solaria. It is exercised through Parliament, the Government and the courts; the Crown holds only the powers the Constitution names.')+'</p>'+
+ '<dl class="kv"><dt>'+t('Territoires','Territories')+'</dt><dd>'+t('Neuf îles, voir la rubrique 5','Nine islands, see item 5')+'</dd>'+
+ '<dt>'+t('Langue','Language')+'</dt><dd>'+t('Le français, formellement «&nbsp;Solarie&nbsp;». Les lois sont publiées en Solarie; la législation du Commonwealth l’est en Solarie et en anglais latrevien. La langue régionale de chaque île est un patrimoine protégé.','French, formally “Solarie”. Laws are published in Solarie; Commonwealth legislation is published in Solarie and in Latrevian English. The regional speech of each island is a protected heritage language.')+'</dd>'+
+ '<dt>'+t('Symboles','Symbols')+'</dt><dd>'+t('Drapeau bleu profond portant un seul losange blanc; armes: un écu bleu portant le même losange. Ce ne sont pas des symboles du Commonwealth, dont le drapeau peut flotter à côté.','A field of deep blue bearing a single white rhombus; the arms are a blue shield bearing the same rhombus. They are not Commonwealth symbols; the Commonwealth flag may fly beside them.')+'</dd>'+
+ '<dt>'+t('Siège','Seat')+'</dt><dd>'+t('Le Parlement et la Couronne siègent à Solarie, en attendant l’achèvement de la Cité-couronne de Solarie, planifiée mais non construite.','Parliament and the Crown sit at Solaria proper until the royal capital, the Cité-couronne de Solarie, is completed. It is planned but unbuilt.')+'</dd>'+
+ '<dt>'+t('Devise','Motto')+'</dt><dd><span class="y">'+t('Vive Solarie. Jamais de couronne sans consentement.','Vive Solarie. Never a crown without consent.')+'</span></dd></dl>'+
+ '<h2 class="sub">'+t('Vos droits','Your rights')+'</h2>'+
+ '<ul class="l"><li>'+t('Les droits du titre II de la Constitution latrevienne s’appliquent directement ici, avec la même force que la Constitution de Solarie.','The rights of Title II of the Latrevian Constitution apply here directly, with the same force as the Solarian Constitution.')+'</li><li>'+t('Le droit d’employer le français et la langue de votre île devant toute autorité publique.','The right to use French, and the speech of your island, with any public authority.')+'</li><li>'+t('Le droit au patrimoine, aux coutumes et aux institutions culturelles de votre île.','The right to the heritage, customs and cultural institutions of your island.')+'</li><li>'+t('Le droit de pétition à la Couronne (renvoi constitutionnel) et au Parlement, avec réponse publique sous quatre-vingt-dix jours.','The right to petition the Crown for a constitutional referral, and to petition Parliament, with a public answer within ninety days.')+'</li></ul>'+
+ '<p class="dim">'+t('Constitution adoptée à Solarie le 3 Helius 165 AAX.','Constitution adopted at Solaria on 3 Helius 165 AAX.')+'</p>'}},
+{n:2,fr:'La Couronne',en:'The Crown',dfr:'Sa Majesté la Reine Zarpaii',den:'Her Majesty Queen Zarpaii',f:function(){return ''+
+ '<dl class="kv"><dt>'+t('Reine','Queen')+'</dt><dd><span class="y">Zarpaii Xarpeius</span></dd><dt>'+t('Chancelier royal','Royal Chancellor')+'</dt><dd><span class="y">Aurélien de Montclar</span></dd></dl>'+
+ '<p>'+t('La Couronne est le chef cérémoniel et constitutionnel du Royaume. Elle détient cinq pouvoirs, et aucun autre; chacun s’exerce avec le contreseing du Chancelier royal.','The Crown is the ceremonial and constitutional head of the Kingdom. It holds five powers and no others, each exercised only with the countersignature of the Royal Chancellor.')+'</p>'+
+ '<h2 class="sub">'+t('Les cinq pouvoirs','The five powers')+'</h2>'+
+ '<ul class="l"><li>'+t('Nommer le Premier ministre, qui a la confiance de l’Assemblée nationale.','Appoint the Premier ministre, who must command the confidence of the Assemblée nationale.')+'</li><li>'+t('Accorder ou refuser la dissolution. Elle ne peut refuser une demande du Premier ministre qu’au cours de l’année qui suit des élections.','Grant or refuse dissolution. The Crown may refuse a Premier ministre’s request only within a year of a general election.')+'</li><li>'+t('Renvoyer une fois un projet de loi, dans les quinze jours, avec motifs écrits.','Return a bill once, within fifteen days, with written reasons.')+'</li><li>'+t('Saisir la Cour constitutionnelle avant de signer une loi; la Cour statue sous quarante-cinq jours.','Refer a law to the Constitutional Court before signing; the Court rules within forty-five days.')+'</li><li>'+t('Recevoir les pétitions et y répondre.','Receive and answer petitions.')+'</li></ul>'+
+ '<h2 class="sub">'+t('Ce que la Couronne n’a pas','What the Crown does not have')+'</h2>'+
+ '<p>'+t('Ni veto, ni initiative politique, ni pouvoir sur le budget, ni pouvoir de faire ou de suspendre la loi. Elle ne peut révoquer un Premier ministre qui a la confiance de l’Assemblée, ni se placer au-dessus de la Cour constitutionnelle. Elle signe chaque loi que le Parlement a votée et que la Cour n’a pas annulée.','No veto, no power of policy initiative, no control over the budget and no power to make or suspend law. It may not dismiss a Premier ministre who commands the Assemblée nationale, nor be placed above the Constitutional Court. It signs every law that Parliament passes and the Court has not struck down.')+'</p>'+
+ '<h2 class="sub">'+t('Le Chancelier royal','The Royal Chancellor')+'</h2>'+
+ '<p>'+t('Officier non partisan, proposé par le Conseil de la Couronne et confirmé par les deux chambres, pour un seul mandat de huit ans. Il contresigne chaque acte de la Couronne et en répond devant le Parlement; la Couronne n’en est jamais responsable. Il ne peut être révoqué que par les deux tiers des deux chambres.','A non-partisan officer, nominated by the Council of the Crown and confirmed by both houses, for a single term of eight years. The Chancellor countersigns every act of the Crown and answers for it to Parliament, so the Crown never does. Removal takes two-thirds of both houses.')+'</p>'+
+ '<h2 class="sub">'+t('Le serment du consentement','The consent oath')+'</h2>'+
+ '<p>'+t('À l’avènement, le monarque jure devant les deux chambres, en séance publique, de garder la Constitution et la Charte, de ne tenir la couronne que du consentement du peuple et de servir également toutes les îles. Il n’y a pas de formule religieuse. La Reine l’a prêté la première, elle qui avait été couronnée des décennies plus tôt sans l’avoir.','At accession the monarch swears before both houses, in open sitting, to keep the Constitution and the Charter, to hold the crown only as the people consent, and to serve every island equally. There is no religious form of words. It was taken first by a queen who had been crowned decades earlier without one.')+'</p>'+
+ '<h2 class="sub">'+t('Le Conseil de la Couronne','The Council of the Crown')+'</h2>'+
+ '<ul class="l"><li>'+t('Le Chancelier royal (sans voix prépondérante)','The Royal Chancellor (no casting vote)')+'</li><li>'+t('Le président de la Cour constitutionnelle','The President of the Constitutional Court')+'</li><li>'+t('La présidente de l’Assemblée nationale, <span class="y">Honorine Valcourt</span>','The Speaker of the Assemblée nationale, <span class="y">Honorine Valcourt</span>')+'</li><li>'+t('Le président du Sénat des Îles, <span class="y">Gaspard Delmarre</span>','The President of the Sénat des Îles, <span class="y">Gaspard Delmarre</span>')+'</li></ul>'+
+ '<p class="dim">'+t('Il conseille la Couronne sur les nominations. À égalité, la question est perdue. La succession suit l’ancienne loi de la lignée cassiopéenne.','It advises the Crown on nominations. On a tie the question is lost. Succession follows the earlier law of the Cassiopeian line.')+'</p>'}},
+{n:3,fr:'Le Parlement',en:'Parliament',dfr:'Assemblée nationale et Sénat des Îles',den:'Assemblée nationale and Sénat des Îles',f:function(){
+ var tot=0;GROUPS.forEach(function(g){tot+=g[4]});
+ var bars=GROUPS.map(function(g){return '<div class="bar" style="--c:'+g[3]+'"><b>'+g[0]+'<small>'+t(g[1],g[2])+'</small></b><span class="f" style="width:'+Math.round(g[4]/62*100)+'%"></span><em>'+g[4]+'</em></div>'}).join('');
+ var trows=TERR.map(function(r){return '<tr><td>'+r[0]+'</td><td class="num">'+r[2]+'</td><td class="num">3</td></tr>'}).join('');
+ return ''+
+ '<p>'+t('Le Parlement a deux chambres. L’<span class="y">Assemblée nationale</span> domine; le <span class="y">Sénat des Îles</span> revoit et retarde, sans pouvoir bloquer. Le Parlement siège en public et publie ses comptes rendus en Solarie et en anglais latrevien.','Parliament has two houses. The <span class="y">Assemblée nationale</span> dominates; the <span class="y">Sénat des Îles</span> reviews and delays but cannot block. Parliament sits in public and publishes its record in Solarie and in Latrevian English.')+'</p>'+
+ '<h2 class="sub">'+t('Assemblée nationale','Assemblée nationale')+'</h2>'+
+ '<dl class="kv"><dt>'+t('Présidente','Speaker')+'</dt><dd><span class="y">Honorine Valcourt</span></dd><dt>'+t('Mandat','Term')+'</dt><dd>'+t('Quatre ans, à la représentation proportionnelle sur tout le Royaume, au scrutin secret. Chaque territoire a au moins un siège.','Four years, by proportional representation from the whole Kingdom, by secret ballot. Each territory has at least one seat.')+'</dd><dt>'+t('Pouvoirs','Powers')+'</dt><dd>'+t('Vote de confiance; origine de tout budget et de tout impôt; dernier mot sur la loi ordinaire.','The confidence vote; originates every budget and tax bill; has the last word on ordinary law.')+'</dd></dl>'+
+ '<p class="dim">'+t('Composition après les dernières élections: '+tot+' sièges.','Composition after the last general election: '+tot+' seats.')+'</p>'+
+ '<div class="bars">'+bars+'</div><p class="maj">'+t('Majorité absolue: 91 sièges. Le Gouvernement s’appuie sur le Parti de la Concorde et les Travaillistes: 99 sièges. Chaque parti siège au Congrès du Commonwealth dans le groupe indiqué sous son nom.','Absolute majority: 91 seats. The Government rests on the Parti de la Concorde and the Travaillistes: 99 seats. Each party sits in the Commonwealth Congress in the group named under it.')+'</p>'+
+ '<h2 class="sub">'+t('Sénat des Îles','Sénat des Îles')+'</h2>'+
+ '<dl class="kv"><dt>'+t('Président','President')+'</dt><dd><span class="y">Gaspard Delmarre</span></dd><dt>'+t('Membres','Members')+'</dt><dd>'+t('Vingt-sept: trois pour chacun des neuf territoires, choisis par le conseil de l’île, pour six ans, renouvelés par tiers tous les deux ans.','Twenty-seven: three for each of the nine territories, chosen by the island council for six-year terms, one-third renewed every two years.')+'</dd><dt>'+t('Pouvoirs','Powers')+'</dt><dd>'+t('Jamais dissous. Examine tout projet pendant soixante jours, peut le retarder une fois et proposer des amendements. Son assentiment est nécessaire pour tout texte qui touche aux compétences des conseils insulaires.','Never dissolved. Examines every bill for sixty days, may delay it once and propose amendments. Its assent is required for anything touching the competence of the island councils.')+'</dd></dl>'+
+ '<h2 class="sub">'+t('Sièges par territoire','Seats by territory')+'</h2>'+
+ '<table class="t"><thead><tr><th>'+t('Territoire','Territory')+'</th><th class="num">'+t('Assemblée','Assemblée')+'</th><th class="num">'+t('Sénat','Senate')+'</th></tr></thead><tbody>'+trows+'</tbody></table>'+
+ '<h2 class="sub">'+t('Comment une loi est faite','How a law is made')+'</h2>'+
+ '<ul class="l"><li>'+t('Un projet peut naître dans l’une ou l’autre chambre ou au Conseil des ministres.','A bill may start in either house or in the Council of Ministers.')+'</li><li>'+t('Le Sénat des Îles a soixante jours pour l’examiner.','The Sénat des Îles has sixty days to examine it.')+'</li><li>'+t('L’Assemblée accepte, rejette ou modifie ses amendements et vote à la majorité simple.','The Assemblée accepts, rejects or modifies its amendments and passes it by a simple majority.')+'</li><li>'+t('La Couronne signe, sauf renvoi ou annulation par la Cour.','The Crown signs, unless it returns the bill or the Court strikes it down.')+'</li></ul>'}},
+{n:4,fr:'Le Gouvernement',en:'The Government',dfr:'Le Premier ministre et le Conseil',den:'The Premier ministre and the Council',f:function(){return ''+
+ '<dl class="kv"><dt>'+t('Premier ministre','Premier ministre')+'</dt><dd><span class="y">George Stellarix</span></dd><dt>'+t('Majorité','Majority')+'</dt><dd>'+t('Parti de la Concorde, Travaillistes (99 sièges sur 180)','Parti de la Concorde, Travaillistes (99 of 180 seats)')+'</dd></dl>'+
+ '<p>'+t('Le Premier ministre dirige le Conseil des ministres et l’administration, exécute les lois et ne répond que devant l’Assemblée nationale.','The Premier ministre leads the Council of Ministers, directs the administration, carries out the laws and answers to the Assemblée nationale alone.')+'</p>'+
+ '<h2 class="sub">'+t('Le Conseil des ministres','The Council of Ministers')+'</h2>'+
+ '<p>'+t('Les ministres sont nommés par la Couronne sur l’avis du Premier ministre, avec le contreseing du Chancelier royal. Chacun répond de son ministère devant l’Assemblée et peut être convoqué dans l’une ou l’autre chambre. Les délibérations sont confidentielles et les procès-verbaux publics après vingt-cinq ans.','Ministers are appointed by the Crown on the Premier ministre’s advice, countersigned by the Royal Chancellor. Each answers to the Assemblée for the conduct of their ministry and may be summoned to either house. Proceedings are confidential, and minutes are made public after twenty-five years.')+'</p>'+
+ '<h2 class="sub">'+t('Nomination et confiance','Appointment and confidence')+'</h2>'+
+ '<ul class="l"><li>'+t('La Couronne nomme la personne qui a la confiance de l’Assemblée. À défaut, un médiateur teste les coalitions pendant vingt jours au plus.','The Crown appoints the person who commands the Assemblée’s confidence. Failing that, a mediator tests coalitions for no more than twenty days.')+'</li><li>'+t('Le Premier ministre ne peut être renversé que par un vote de défiance constructif: une motion qui nomme un successeur et obtient la majorité simple. Une censure sans successeur est sans effet.','The Premier ministre can be removed only by a constructive vote of no confidence: a motion that names a successor and carries a simple majority. A censure with no named successor has no effect.')+'</li><li>'+t('Il peut poser la question de confiance à tout moment.','The Premier ministre may put a question of confidence at any time.')+'</li><li>'+t('La dissolution suit la demande du Premier ministre, sauf dans l’année d’une élection. La Couronne ne peut dissoudre seule qu’en cas d’impasse certifiée par la Cour. Une élection suit sous soixante jours.','Dissolution follows the Premier ministre’s request, except within a year of an election. The Crown may dissolve alone only on a deadlock the Court certifies. An election follows within sixty days.')+'</li></ul>'}},
+{n:5,fr:'Les Îles',en:'The Islands',dfr:'Neuf territoires, neuf conseils',den:'Nine territories, nine councils',f:function(){
+ var rows=TERR.map(function(r){return '<tr><td class="y">'+r[0]+'</td><td>'+t(r[4],r[5])+'</td></tr>'}).join('');
+ return ''+
+ '<p>'+t('Le Royaume compte <span class="y">neuf territoires</span>. Aucun n’est une entité constitutive du Commonwealth, et aucun ne peut être cédé, fusionné ou divisé sans la procédure de l’article 31.','The Kingdom comprises <span class="y">nine territories</span>. None is a constituent entity of the Commonwealth, and none may be ceded, merged or divided except by the procedure of Article 31.')+'</p>'+
+ '<table class="t"><thead><tr><th>'+t('Territoire','Territory')+'</th><th>'+t('En bref','In brief')+'</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+ '<h2 class="sub">'+t('Les conseils insulaires','The island councils')+'</h2>'+
+ '<p>'+t('Chaque territoire a un conseil élu pour quatre ans par ses habitants. Il gouverne les affaires locales, choisit ses trois sénateurs et parle pour son île devant le Parlement et la Couronne. Il a autorité sur: le gouvernement local, l’usage des sols, l’urbanisme local, les institutions culturelles et patrimoniales, et la protection de la langue régionale.','Each territory has a council elected for four years by its residents. It governs local affairs, chooses its three senators and speaks for its island before Parliament and the Crown. It has authority over local government, land use, local planning, cultural and heritage institutions, and the protection of regional speech.')+'</p>'+
+ '<h2 class="sub">'+t('Double héritage','Hybrid heritage')+'</h2>'+
+ '<p>'+t('Neu Solaria, Clement et Verrecôte sont venues au Royaume par achat à la République latrevienne. Une loi du Parlement doit donner à chacune un cadre à double code qui reconnaisse les coutumes des deux traditions, sur le modèle de New Latrei et d’Haradia en Latrevia, sans réduire aucun droit.','Neu Solaria, Clement and Verrecôte came to the Kingdom by sale from the Latrevian Republic. A law of Parliament shall give each a dual-code framework recognising the customs of both traditions, on the model of New Latrei and Haradia in Latrevia, without reducing any right.')+'</p>'+
+ '<h2 class="sub">'+t('Intégrité des territoires','Integrity of the territories')+'</h2>'+
+ '<p>'+t('Fusionner ou diviser des territoires exige les deux tiers des deux chambres, le consentement de chaque conseil touché et un référendum local aux deux tiers. Perdre un territoire, par sécession ou cession, exige les trois quarts des deux chambres et un référendum local aux trois quarts.','Merging or dividing territories takes two-thirds of both houses, the consent of each council affected and a two-thirds local referendum. Losing a territory, by secession or cession, takes three-quarters of both houses and a three-quarters local referendum.')+'</p>'+
+ '<h2 class="sub">'+t('La Cité-couronne','The Cité-couronne')+'</h2>'+
+ '<p>'+t('La capitale royale future, la Cité-couronne de Solarie, figure sur la carte mais n’est pas construite. La Constitution la nomme pour qu’une génération future puisse y transférer le siège par une loi des deux chambres.','The planned royal capital, the Cité-couronne de Solarie, is marked on the map but not yet built. The Constitution names it so that a future generation may move the seat by a law of both houses.')+'</p>'}},
+{n:6,fr:'Les Tribunaux',en:'The Courts',dfr:'Cour constitutionnelle, Cour suprême',den:'Constitutional and Supreme Court',f:function(){return ''+
+ '<h2 class="sub">'+t('Cour constitutionnelle','Constitutional Court')+'</h2>'+
+ '<p>'+t('Elle juge de la constitutionnalité des lois et des actes du Royaume et des saisines de la Couronne. Cinq juges, pour douze ans non renouvelables: deux désignés par la Couronne sur l’avis du Premier ministre, deux par l’Assemblée nationale, un par le Sénat des Îles; chacun est confirmé aux deux tiers par le Sénat. Les mandats sont échelonnés.','It rules on the constitutionality of laws and acts of the Kingdom and on referrals from the Crown. Five judges serve non-renewable twelve-year terms: two nominated by the Crown on the Premier ministre’s advice, two by the Assemblée nationale and one by the Sénat des Îles. Each is confirmed by two-thirds of the Sénat. Terms are staggered.')+'</p>'+
+ '<p>'+t('Peuvent la saisir: la Couronne, le Premier ministre, un tiers de l’une ou l’autre chambre, tout conseil insulaire, et tout tribunal devant une question constitutionnelle. Une loi annulée est nulle à compter de la décision, sauf date ultérieure fixée par la Cour.','It may be petitioned by the Crown, the Premier ministre, one-third of either house, any island council, or any court facing a constitutional question. A law struck down is void from the date of the ruling, unless the Court sets a later date.')+'</p>'+
+ '<h2 class="sub">'+t('Cour suprême','Supreme Court')+'</h2>'+
+ '<p>'+t('Dernière instance d’appel pour le droit solarien. Ses juges sont nommés par la Couronne sur l’avis du Conseil de la Couronne, avec l’accord du Sénat des Îles, jusqu’à soixante-quinze ans. Ses décisions sont soumises à la Haute Cour du Commonwealth en matière de droit du Commonwealth.','The final court of appeal for Solarian law. Its justices are appointed by the Crown on the advice of the Council of the Crown, with the consent of the Sénat des Îles, and serve until seventy-five. Its decisions are subject to the Commonwealth High Court on matters of Commonwealth law.')+'</p>'+
+ '<h2 class="sub">'+t('Au Commonwealth','In the Commonwealth')+'</h2>'+
+ '<p>'+t('Solarie propose deux juges à la Cour constitutionnelle du Commonwealth et trois à la Haute Cour. Ils sont désignés par la Couronne sur l’avis du Conseil de la Couronne et confirmés par le Sénat des Îles.','Solaria nominates two judges to the Commonwealth Constitutional Court and three to the High Court. They are nominated by the Crown on the advice of the Council of the Crown and confirmed by the Sénat des Îles.')+'</p>'}},
+{n:7,fr:'Les Finances',en:'Finances',dfr:'Fonds souverain, Domaine, liste civile',den:'Sovereign Fund, Estate, Civil List',f:function(){return ''+
+ '<p>'+t('Le Royaume est riche comme centre financier et maritime, et il redistribue: la banque, l’assurance et le transport maritime financent, par le budget, le Fonds et le Domaine, un État-providence à la française.','The Kingdom is rich as a financial and maritime centre, and it redistributes: banking, insurance and shipping fund a French-style welfare state through the budget, the Fund and the Estate.')+'</p>'+
+ '<h2 class="sub">'+t('Le Fonds souverain','The Sovereign Fund')+'</h2>'+
+ '<p>'+t('Il détient l’excédent des recettes bancaires, d’assurance et maritimes, et le revenu du Domaine de la Couronne, pour le peuple et les générations futures. Tout retrait exige une loi de l’Assemblée avec l’assentiment du Sénat des Îles. Il est audité chaque année, et son rapport est publié dans les deux langues. Il ne peut être engagé pour une obligation du Commonwealth sans l’accord du Parlement.','It holds the surplus of the Kingdom’s banking, insurance and shipping revenue, and the income of the Crown Estate, for the people and future generations. Withdrawals require a law passed by the Assemblée with the assent of the Sénat des Îles. It is audited each year and its report is published in both languages. It may not be pledged to any Commonwealth obligation without the consent of Parliament.')+'</p>'+
+ '<h2 class="sub">'+t('Le Domaine de la Couronne','The Crown Estate')+'</h2>'+
+ '<p>'+t('Détenu en fiducie pour le peuple de Solarie. Il n’appartient ni au monarque ni au gouvernement du jour. Un conseil indépendant, nommé par le Conseil de la Couronne et confirmé par le Sénat des Îles, le gère et rend compte chaque année au Parlement. Son revenu va au Fonds souverain.','Held in trust for the people of Solaria. It belongs neither to the monarch nor to the Government of the day. An independent board, appointed by the Council of the Crown and confirmed by the Sénat des Îles, manages it and reports annually to Parliament. Its income is paid to the Sovereign Fund.')+'</p>'+
+ '<h2 class="sub">'+t('La liste civile','The Civil List')+'</h2>'+
+ '<p>'+t('Une somme annuelle fixe, fixée par la loi au début de chaque règne et révisée au plus tous les dix ans. Elle paie la maison du monarque, les devoirs cérémoniels et le bureau du Chancelier royal. La Couronne n’a aucun autre droit sur l’argent public, et aucun pouvoir sur le Domaine ni sur le Fonds.','A fixed annual sum, set by law at the start of each reign and reviewed no more often than every ten years. It pays for the monarch’s household, ceremonial duties and the Royal Chancellor’s office. The Crown has no other claim on public money and no power over the Estate or the Fund.')+'</p>'+
+ '<h2 class="sub">'+t('Budget','Budget')+'</h2>'+
+ '<p>'+t('Tout budget naît à l’Assemblée nationale; le Sénat des Îles peut l’amender mais non initier un crédit. À défaut de budget au début de l’exercice, les dépenses continuent au niveau précédent, sans nouveau programme.','Budget bills originate in the Assemblée nationale. The Sénat des Îles may amend a budget but may not initiate an appropriation. If no budget is enacted by the start of the fiscal year, spending continues at the previous year’s level and no new programme may be funded.')+'</p>'+
+ '<p class="dim">'+t('La contribution au Commonwealth est un pourcentage fixe des recettes de chaque entité; Solarie, la plus riche par habitant, paie donc plus en valeur absolue que sa taille ne le laisse penser.','The Commonwealth contribution is a fixed percentage of each entity’s revenue, so Solaria, the richest per head, pays more in absolute terms than its size suggests.')+'</p>'}},
+{n:8,fr:'Le Commonwealth',en:'The Commonwealth',dfr:'Les cinquante sénateurs solariens',den:'The fifty Solarian senators',f:function(){
+ var gcol={'Centre Union':'var(--cy)','Conservative Union':'var(--rd)','Progressive Alliance':'var(--gn)','Commonwealth Left':'var(--mg)','League of Regions':'var(--yl)','Non-attached':'var(--dim)'};
+ var gpt={'Centre Union':'Parti de la Concorde','Conservative Union':'Union Royale','Progressive Alliance':'Travaillistes','Commonwealth Left':'Parti Républicain','League of Regions':'Front des Îles','Non-attached':''};var gfr={'Centre Union':'Union du Centre','Conservative Union':'Union conservatrice','Progressive Alliance':'Alliance progressiste','Commonwealth Left':'Gauche Commune','League of Regions':'Ligue des Régions','Non-attached':'Non-inscrit'};
+ var cnt={};SENATORS.forEach(function(s){cnt[s[1]]=(cnt[s[1]]||0)+1});
+ var leg=Object.keys(gcol).map(function(g){return '<span style="--c:'+gcol[g]+'"><i></i>'+t(gfr[g],g)+(gpt[g]?' ('+gpt[g]+')':'')+' '+(cnt[g]||0)+'</span>'}).join('');
+ var list=SENATORS.map(function(s){return '<li style="--c:'+gcol[s[1]]+'"><i></i>'+s[0]+'<small>'+s[2]+'</small></li>'}).join('');
+ return ''+
+ '<p>'+t('Solarie est une entité fondatrice du Commonwealth de Latrevia et de Solarie. La Charte est du droit solarien contraignant et, dans les compétences des articles 8 et 22 de la Charte, elle l’emporte sur le droit solarien.','Solaria is a founding constituent entity of the Commonwealth of Latrevia and Solaria. The Charter is binding Solarian law and, within the competences of Articles 8 and 22 of the Charter, it prevails over Solarian law.')+'</p>'+
+ '<h2 class="sub">'+t('La délégation au Sénat du Commonwealth','The delegation to the Commonwealth Senate')+'</h2>'+
+ '<p>'+t('Cinquante sénateurs, nommés par la Couronne sur l’avis du Premier ministre, mais seulement parmi une liste proposée par chaque conseil insulaire et le Parlement ensemble. Chaque territoire a un siège; les quarante et un autres vont à la population, au plus fort reste. Trois classes: dix-sept, dix-sept et seize. Un siège vacant est pourvu sous soixante jours. Président du Sénat du Commonwealth: <span class="y">Mikhail Davidovich</span>.','Fifty senators, appointed by the Crown on the Premier ministre’s advice, but only from a slate put forward by each island council and Parliament together. Each territory has one seat; the other forty-one go by population, by largest remainders. Three classes: seventeen, seventeen and sixteen. A vacancy is filled within sixty days. President of the Commonwealth Senate: <span class="y">Mikhail Davidovich</span>.')+'</p>'+
+ '<div class="leg">'+leg+'</div><ul class="sen">'+list+'</ul>'+
+ '<p class="dim">'+t('Classe I, II ou III à droite de chaque nom. Un membre du Parlement doit quitter son siège ici avant de prêter serment au Commonwealth.','Class I, II or III is shown at the right of each name. A member of Parliament must give up the seat here before taking the oath in the Commonwealth.')+'</p>'+
+ '<h2 class="sub">'+t('La Couronne et le Commonwealth','The Crown and the Commonwealth')+'</h2>'+
+ '<p>'+t('La Couronne n’a aucun rôle exécutif dans le Commonwealth, sauf la consultation: elle est consultée sur toute question qui touche directement les intérêts solariens, et le Chancelier royal donne son avis.','The Crown has no executive role in the Commonwealth except consultation: it is formally consulted on every matter that directly affects Solarian interests, and the Royal Chancellor gives the Crown’s views.')+'</p>'+
+ '<h2 class="sub">'+t('Voir aussi','See also')+'</h2>'+
+ '<ul class="l"><li><a href="commonwealth.html">'+t('Le Commonwealth','The Commonwealth')+'</a></li><li><a href="congress.html">'+t('Le Congrès du Commonwealth','The Commonwealth Congress')+'</a></li><li><a href="latrevia.html">'+t('La République fédérale de Latrevia','The Federal Republic of Latrevia')+'</a></li></ul>'}}
+];
+/* rendering */
+var main=document.getElementById('main'),cur=0,msg='';
+function $(i){return document.getElementById(i)}
+function seal(){return ''}
+function menu(){return '<ul class="menu">'+P.map(function(p){return '<li><a href="#/'+p.n+'"><span class="n">'+p.n+'</span><span class="nm">'+t(p.fr,p.en)+'</span><span class="dots"></span><span class="d">'+t(p.dfr,p.den)+'</span></a></li>'}).join('')+'</ul>'}
+function prompt(){return '<div class="msg" id="msg" role="alert">'+msg+'</div><form class="prompt" id="pf" autocomplete="off"><label for="ch">'+t('Votre choix','Your choice')+' :</label><input id="ch" inputmode="numeric" maxlength="2" aria-label="'+t('Numéro de rubrique','Item number')+'"><button class="go" type="submit">ENVOI</button><span class="hint">'+t('Tapez le numéro d’une rubrique, puis ENVOI.','Type an item number, then ENVOI.')+'</span><span class="cur-blink" aria-hidden="true"></span></form>'}
+function pager(){var back=cur?'<a class="btn ghost" href="javascript:history.back()">‹ '+t('Retour','Back')+'</a>':'';var nxt=cur&&cur<P.length?'<a class="btn" href="#/'+(cur+1)+'">'+t('Suite','Next')+' ›</a>':'';return '<div class="pager"><a class="btn ghost" href="#/">'+t('Sommaire','Contents')+'</a>'+back+nxt+'</div>'}
+function home(){
+ var tot=0;GROUPS.forEach(function(g){tot+=g[4]});
+ return '<p class="mono eyebrow">'+t('Constitution du 3 Helius 165 AAX','Constitution of 3 Helius 165 AAX')+' · '+clock()+'</p>'+
+ '<div class="hero"><div><h1>'+t('Royaume de Solarie','Kingdom of Solaria')+'</h1>'+
+ '<p class="lead">'+t('Le portail officiel du Royaume des Îles: une Couronne qui ne tient que du consentement, un Parlement, un Gouvernement et neuf territoires.','The official portal of the Kingdom of the Islands: a Crown that rules only by consent, a Parliament, a Government and nine territories.')+'</p>'+
+ '<div class="cta"><a class="btn" href="#/1">'+t('Le Royaume','The Kingdom')+'</a><a class="btn ghost" href="#/3">'+t('Le Parlement','Parliament')+'</a><a class="btn ghost" href="#/8">'+t('Le Commonwealth','The Commonwealth')+'</a></div></div>'+
+ '<div class="side">'+flag(230)+'<p class="motto">'+t('Vive Solarie. Jamais de couronne sans consentement.','Vive Solarie. Never a crown without consent.')+'</p></div></div>'+
+ '<ul class="facts"><li><b>9</b><span>'+t('territoires','territories')+'</span></li><li><b>'+tot+'</b><span>'+t('sièges à l’Assemblée','Assemblée seats')+'</span></li><li><b>27</b><span>'+t('sénateurs des Îles','island senators')+'</span></li><li><b>50</b><span>'+t('sénateurs au Commonwealth','Commonwealth senators')+'</span></li></ul>'+
+ '<span class="sech">'+t('Sommaire','Contents')+'</span>'+menu()+prompt()+
+ '<p class="cred">'+t('Textes publiés en Solarie et en anglais latrevien.','Texts published in Solarie and in Latrevian English.')+'</p>'}
+function page(p){return '<p class="mono eyebrow">'+t('Rubrique','Item')+' '+p.n+' / '+P.length+' · '+t(p.dfr,p.den)+'</p><h1>'+t(p.fr,p.en)+'</h1>'+p.f()+pager()+prompt()}
+function chrome(p){
+ var oc=P.map(function(x){return '<a href="#/'+x.n+'"'+(p&&x.n===p.n?' class="cur"':'')+'><span class="n">'+x.n+'</span>'+t(x.fr,x.en)+'</a>'}).join('');
+ $('mnav').innerHTML=oc+'<a class="out" href="commonwealth.html">'+t('Commonwealth','Commonwealth')+' ↗</a>';
+ $('brT').textContent=t('Royaume de Solarie','Kingdom of Solaria');
+ $('brS').textContent='3615 SOLARIE · '+t('Portail officiel','Official portal');
+ $('skip').textContent=t('Aller au contenu','Skip to content');
+ $('stripL').innerHTML='<b>3615 SOLARIE</b> · '+t('Site officiel du Royaume de Solarie','An official website of the Kingdom of Solaria');
+ $('stripR').textContent=clock();
+ var subs=[].slice.call(main.querySelectorAll('h2.sub'));subs.forEach(function(h,i){h.id='s'+i});
+ var on=subs.length?subs.map(function(h,i){return '<a href="#s'+i+'" data-sub="1">'+h.textContent+'</a>'}).join(''):P.map(function(x){return '<a href="#/'+x.n+'">'+t(x.fr,x.en)+'</a>'}).join('');
+ $('sd').innerHTML='<div class="box"><h4>'+t('Sur cette page','On this page')+'</h4>'+on+'</div><div class="box"><h4>'+t('Le Royaume','The Kingdom')+'</h4><a href="#/"'+(p?'':' class="cur"')+'>'+t('Sommaire','Contents')+'</a>'+P.map(function(x){return '<a href="#/'+x.n+'"'+(p&&x.n===p.n?' class="cur"':'')+'>'+x.n+' · '+t(x.fr,x.en)+'</a>'}).join('')+'</div><div class="box"><h4>'+t('La famille','The family')+'</h4><a href="commonwealth.html">'+t('Le Commonwealth','The Commonwealth')+' ↗</a><a href="congress.html">'+t('Le Congrès','The Congress')+' ↗</a><a href="latrevia.html">'+t('Latrevia','Latrevia')+' ↗</a></div>';
+ var th=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');
+ $('langBtn').textContent=LANG==='fr'?'English':'Français';
+ $('themeBtn').textContent=th==='dark'?t('Mode clair','Light mode'):t('Mode sombre','Dark mode');
+ $('fT').textContent=t('Service fictif du Royaume de Solarie, 166 AAX.','A fictional service of the Kingdom of Solaria, 166 AAX.');
+ $('fN').innerHTML=t('Constitution du Royaume, 3 Helius 165 AAX','Constitution of the Kingdom, 3 Helius 165 AAX');
+}
+function route(){var h=(location.hash||'#/').replace(/^#\/?/,'');var n=parseInt(h,10);var p=P.filter(function(x){return x.n===n})[0];cur=p?p.n:0;main.innerHTML=p?page(p):home();chrome(p);document.title=(p?t(p.fr,p.en)+' — ':'')+t('Royaume de Solarie','Kingdom of Solaria')+' · 3615 SOLARIE';document.documentElement.lang=LANG;wire();msg='';window.scrollTo(0,0)}
+function go(v){v=(v||'').trim();if(v===''||v==='0'){location.hash='#/';return}var n=parseInt(v,10);if(n>=1&&n<=P.length){location.hash='#/'+n}else{msg=t('Choix inconnu. Tapez 1 à '+P.length+'.','Unknown choice. Type 1 to '+P.length+'.');var m=$('msg');if(m)m.textContent=msg}}
+function wire(){var f=$('pf');if(f)f.onsubmit=function(e){e.preventDefault();go($('ch').value)}}
+window.addEventListener('hashchange',function(){if(/^#s\d+$/.test(location.hash))return;route()});
+$('langBtn').onclick=function(){LANG=LANG==='fr'?'en':'fr';try{localStorage.setItem('solaria-lang',LANG)}catch(e){}route()};
+$('themeBtn').onclick=function(){var r=document.documentElement,c=r.getAttribute('data-theme');if(!c)c=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';var n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('solaria-theme',n)}catch(e){}chrome(P.filter(function(x){return x.n===cur})[0])};
+try{var s=localStorage.getItem('solaria-theme');if(s)document.documentElement.setAttribute('data-theme',s)}catch(e){}
+route();setInterval(function(){var c=$('stripR');if(c)c.textContent=clock()},30000);
+</script>
+</body>
+</html>
