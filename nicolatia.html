@@ -3,8 +3,8 @@
 <title>Николатское царство · Справочная система</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Cpath d='M0 0L64 64M64 0L0 64' stroke='%23cf4f85' stroke-width='9'/%3E%3Cpolygon points='32,12 56,32 32,52 8,32' fill='%23000'/%3E%3Ccircle cx='32' cy='30' r='8' fill='%23f3a900'/%3E%3C/svg%3E">
 <style>
-:root{--desk:#0a0608;--face:#2d2227;--hi:#7a6870;--sh:#140d10;--dk:#000;--ui:#eadde1;--win:#0b0709;--txt:#e6dadd;--mut:#a8979d;--link:#f08cb5;--head:#f3a900;--tb1:#000;--tb2:#cf4f85;--sel:#cf4f85;--selt:#fff;--line:#3b2a31}
-:root[data-theme=classic]{--desk:#008080;--face:#c0c0c0;--hi:#fff;--sh:#808080;--dk:#000;--ui:#000;--win:#fff;--txt:#000;--mut:#444;--link:#0000c8;--head:#000080;--tb1:#000080;--tb2:#1084d0;--sel:#000080;--selt:#fff;--line:#b4b4b4}
+:root{--desk:#0a0608;--face:#2d2227;--hi:#7a6870;--sh:#140d10;--dk:#000;--ui:#eadde1;--win:#0b0709;--txt:#e6dadd;--mut:#a8979d;--link:#f08cb5;--head:#f3a900;--tb1:#000;--tb2:#cf4f85;--sel:#cf4f85;--selt:#fff;--line:#3b2a31;--d1:#150b10;--d2:#0a0608}
+:root[data-theme=lilac]{--desk:#a893b8;--d1:#b3a0c2;--d2:#a893b8;--face:#e4d9ec;--hi:#faf6fd;--sh:#8f7ea0;--dk:#2a1d36;--ui:#241a2e;--win:#fcfaff;--txt:#2a2033;--mut:#65577a;--link:#a02a78;--head:#7a2a8c;--tb1:#33194a;--tb2:#8a4fb0;--sel:#8a4fb0;--selt:#fff;--line:#d3c6df}
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--desk);color:var(--ui);font:13px/1.4 Tahoma,"MS Sans Serif",Verdana,Arial,sans-serif;padding-bottom:38px}
@@ -44,7 +44,7 @@ table.t td{padding:5px 8px;border:1px solid var(--line);vertical-align:top}
 .cred{margin-top:20px;font-size:12.5px;color:var(--mut)}
 
 body{padding:0;background:var(--desk)}
-:root:not([data-theme=classic]) body{background:repeating-linear-gradient(135deg,#150b10 0 22px,#0a0608 22px 44px)}
+body{background:repeating-linear-gradient(135deg,var(--d1) 0 22px,var(--d2) 22px 44px)}
 .site{max-width:1440px;margin:0 auto;padding:12px}
 .win{background:var(--face);padding:3px;box-shadow:inset -1px -1px var(--dk),inset 1px 1px var(--hi),inset -2px -2px var(--sh),inset 2px 2px var(--face)}
 .tb{display:flex;align-items:center;gap:8px;padding:4px 8px;background:linear-gradient(90deg,var(--tb1),var(--tb2));color:#fff;font-weight:700;font-size:14px}
@@ -209,10 +209,11 @@ function page(p){return '<h1>'+nm(p)+'</h1><p class="dsc">'+T(p.dru,p.den)+'</p>
 var SITES=[['commonwealth.html',T('Содружество Латревии и Солярии','Commonwealth of Latrevia and Solaria')],['latrevia.html',T('Федеративная Республика Латревия','Federal Republic of Latrevia')],['luisara.html','Luisara']];
 
 function box(title,html){return '<div class="win"><div class="tb"><span class="tt">'+title+'</span></div><div class="bd">'+html+'</div></div>'}
-function curTheme(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:light)').matches?'classic':'nic')}
+var THEMES=['nic','lilac'],TN={nic:['Тёмная','Dark'],lilac:['Сирень','Lilac']};
+function curTheme(){var t=document.documentElement.getAttribute('data-theme');return THEMES.indexOf(t)>-1?t:(matchMedia('(prefers-color-scheme:light)').matches?'lilac':'nic')}
 function chrome(){
  $('tbi').innerHTML=seal(26);$('tbt').textContent=T('Николатское царство','Tsardom of Nicolatia');
- $('nav').innerHTML='<a class="btn'+(curP?'':' cur')+'" href="#/">'+T('Главная','Home')+'</a>'+P.map(function(p){return '<a class="btn'+(curP===p?' cur':'')+'" href="#/'+p.id+'"'+(curP===p?' aria-current="page"':'')+'>'+nm(p)+'</a>'}).join('')+'<span class="sp"></span><button class="btn" type="button" id="bl">'+(LANG==='ru'?'English':'Русский')+'</button><button class="btn" type="button" id="bt">'+T('Схема','Scheme')+'</button>';
+ $('nav').innerHTML='<a class="btn'+(curP?'':' cur')+'" href="#/">'+T('Главная','Home')+'</a>'+P.map(function(p){return '<a class="btn'+(curP===p?' cur':'')+'" href="#/'+p.id+'"'+(curP===p?' aria-current="page"':'')+'>'+nm(p)+'</a>'}).join('')+'<span class="sp"></span><button class="btn" type="button" id="bl">'+(LANG==='ru'?'English':'Русский')+'</button><button class="btn" type="button" id="bt" title="'+T('Сменить цветовую схему','Change colour scheme')+'">'+T('Схема','Scheme')+': '+TN[curTheme()][LANG==='ru'?0:1]+'</button>';
  $('bl').onclick=setLang;$('bt').onclick=setTheme;
  $('mt').textContent=curP?nm(curP):T('Добро пожаловать','Welcome');
  var subs=[];main.querySelectorAll('h2.sub').forEach(function(e,i){e.id='h'+i;subs.push([e.id,e.textContent])});
@@ -224,11 +225,11 @@ function chrome(){
  $('foot').innerHTML='<span><b>'+T('Николатское царство','Tsardom of Nicolatia')+'</b> · '+T('вымышленное государство, 166 AAX','a fictional state, 166 AAX')+'</span><span>RU · EN</span>';
  $('clk').textContent=clock()}
 function route(){var h=(location.hash||'#/').replace(/^#\/?/,'');curP=P.filter(function(x){return x.id===h})[0]||null;document.documentElement.lang=LANG;main.innerHTML=curP?page(curP):home();chrome();document.title=(curP?nm(curP)+' · ':'')+T('Николатское царство','Tsardom of Nicolatia');window.scrollTo(0,0)}
-function setTheme(){var n=curTheme()==='nic'?'classic':'nic';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('nicolatia-theme2',n)}catch(e){}}
+function setTheme(){var n=curTheme()==='nic'?'lilac':'nic';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('nicolatia-theme2',n)}catch(e){}chrome()}
 function setLang(){LANG=LANG==='ru'?'en':'ru';try{localStorage.setItem('nicolatia-lang',LANG)}catch(e){}route()}
 window.addEventListener('hashchange',route);
 document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT'||e.altKey||e.ctrlKey||e.metaKey)return;var i=curP?P.indexOf(curP):-1;if(e.key==='ArrowRight'&&i<P.length-1)location.hash='#/'+SL[i+1];if(e.key==='ArrowLeft'&&i>0)location.hash='#/'+SL[i-1]});
-try{var s=localStorage.getItem('nicolatia-theme2');if(s==='nic'||s==='classic')document.documentElement.setAttribute('data-theme',s)}catch(e){}
-if(!document.documentElement.getAttribute('data-theme'))document.documentElement.setAttribute('data-theme',matchMedia('(prefers-color-scheme:light)').matches?'classic':'nic');
+try{var s=localStorage.getItem('nicolatia-theme2');if(s==='classic'||s==='rose'||s==='amber')s='lilac';if(THEMES.indexOf(s)>-1)document.documentElement.setAttribute('data-theme',s)}catch(e){}
+if(!document.documentElement.getAttribute('data-theme'))document.documentElement.setAttribute('data-theme',curTheme());
 route();setInterval(function(){var c=$('clk');if(c)c.textContent=clock()},20000);
 </script></body></html>
