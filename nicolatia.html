@@ -206,7 +206,7 @@ function home(){return '<div class="welcome">'+flag(300)+'<div><h1>'+T('Нико
 function idx(){return curP?P.indexOf(curP):-1}
 function pager(){var i=idx(),a=i>0?'<a class="btn" href="#/'+SL[i-1]+'">« '+nm(P[i-1])+'</a>':'',b=i<P.length-1?'<a class="btn" href="#/'+SL[i+1]+'">'+nm(P[i+1])+' »</a>':'';return '<div class="pager"><a class="btn" href="#/">'+T('Главная','Home')+'</a>'+a+b+'</div>'}
 function page(p){return '<h1>'+nm(p)+'</h1><p class="dsc">'+T(p.dru,p.den)+'</p>'+p.f()+pager()}
-var SITES=[['commonwealth.html',T('Содружество Латревии и Солярии','Commonwealth of Latrevia and Solaria')],['latrevia.html',T('Федеративная Республика Латревия','Federal Republic of Latrevia')],['lpn.html','LPN']];
+var SITES=[['commonwealth.html',T('Содружество Латревии и Солярии','Commonwealth of Latrevia and Solaria')],['latrevia.html',T('Федеративная Республика Латревия','Federal Republic of Latrevia')],['luisara.html','Luisara']];
 
 function box(title,html){return '<div class="win"><div class="tb"><span class="tt">'+title+'</span></div><div class="bd">'+html+'</div></div>'}
 function curTheme(){return document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:light)').matches?'classic':'nic')}
