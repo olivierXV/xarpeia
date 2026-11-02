@@ -258,10 +258,10 @@ Status after the 18 Oct reconciliation:
 ## 7. Open questions
 
 1. **Whether VNC carries advertising** (4.5 item 1).
-2. **Old poster names:** Helioland, "Western-Central Kosmos" and "Northern Kosmos" map to nothing in canon.
-3. **Finance / Taverné cabinet duplicate** in the Assembly spreadsheet (the Reference suggests it comes from the rule books).
+2. **Old poster names (resolved):** dropped. Helioland, "Western-Central Kosmos" and "Northern Kosmos" are not in the Master Chronicle (D-049).
+3. **Finance / Taverné cabinet duplicate (resolved):** dropped, since the sites already mention Taverné (D-049).
 4. **Next sites:** RVBN is built; V3, LPN and NPBC remain.
-5. **Kosmos Cup:** acceptable as an in-world league? A canon sport tradition?
+5. **Kosmos Cup (resolved):** accepted as an in-world league with a canon football tradition (D-049).
 6. **VBN Productions:** a page on the corporate site, or stay a card?
 7. **Regnum:** whether a satellite relay or other link ever returns; Valentin, the hostages and the other threads stay open in the Reference.
 8. **Paradeisos:** the Chronicle says only that it governed itself; the sites keep the older name Paradise Colony as an archive nod. One merging line is suggested.
